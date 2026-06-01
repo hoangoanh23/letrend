@@ -1,0 +1,2401 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)https://koala.letrendolympiad.edu.vn/ -->
+<html lang="vi"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KEO 2026 – Kỳ thi Olympic Toán học, Tiếng Anh và Khoa học KOALA Australia</title>
+  <meta name="description" content="KEO – Koala Excellence Olympiad 2026. Kỳ thi Olympic Toán học, Tiếng Anh và Khoa học dành cho học sinh lớp 1–12 theo chuẩn chương trình giáo dục Úc.">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./KEO 2026 – Kỳ thi Olympic Toán học, Tiếng Anh và Khoa học KOALA Australia_files/css2" rel="stylesheet">
+  <link rel="stylesheet" href="./KEO 2026 – Kỳ thi Olympic Toán học, Tiếng Anh và Khoa học KOALA Australia_files/all.min.css">
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Be Vietnam Pro', sans-serif;
+      color: #1a1a2e;
+      background: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ===== CSS VARIABLES ===== */
+    :root {
+      --green: #2d8a4e;
+      --green-dark: #1f6b3a;
+      --green-light: #4aab6d;
+      --gold: #f0a500;
+      --gold-light: #ffd166;
+      --navy: #0d1b4b;
+      --navy-light: #1a2f6e;
+      --bg-light: #f4fbf7;
+      --bg-section: #e8f5ee;
+      --text-muted: #6b7280;
+      --radius: 12px;
+      --shadow: 0 4px 24px rgba(13,27,75,.10);
+      --shadow-lg: 0 8px 40px rgba(13,27,75,.15);
+      --transition: .3s ease;
+    }
+
+    /* ===== UTILITY ===== */
+    .container { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+    .section { padding: 80px 0; }
+    .section-sm { padding: 56px 0; }
+    .section-title {
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      font-weight: 800;
+      color: var(--navy);
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .section-sub {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 1rem;
+      max-width: 900px;
+      margin: 0 auto 48px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(45,138,78,.10);
+      color: var(--green-dark);
+      font-family: 'Raleway', 'Be Vietnam Pro', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: .10em;
+      text-transform: uppercase;
+      padding: 6px 22px;
+      border-radius: 100px;
+      border: 2px solid rgba(45,138,78,.35);
+      margin-bottom: 14px;
+    }
+    /* Centered section badge variant */
+    .badge-centered {
+      display: table;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      border-radius: 100px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: transform var(--transition), box-shadow var(--transition), background var(--transition), border-color var(--transition), color var(--transition);
+    }
+    .btn:hover { transform: translateY(-3px); }
+    .btn-primary { background: var(--green); color: #fff; box-shadow: 0 4px 16px rgba(45,138,78,.35); }
+    .btn-primary:hover { background: var(--green-dark); box-shadow: 0 8px 28px rgba(45,138,78,.50); }
+    .btn-outline { background: transparent; color: var(--green); border: 2px solid var(--green); }
+    .btn-outline:hover { background: var(--green); color: #fff; box-shadow: 0 6px 20px rgba(45,138,78,.35); }
+    .btn-gold { background: var(--gold); color: var(--navy); box-shadow: 0 4px 16px rgba(240,165,0,.35); border-color: transparent; }
+    .btn-gold:hover { background: #e09400; box-shadow: 0 8px 28px rgba(240,165,0,.55); transform: translateY(-3px); }
+    /* Outline button for use on dark/gradient backgrounds */
+    .btn-white-outline {
+      background: rgba(255,255,255,.10);
+      color: #fff;
+      border: 2px solid rgba(255,255,255,.65);
+    }
+    .btn-white-outline:hover {
+      background: rgba(255,255,255,.22);
+      border-color: #fff;
+      box-shadow: 0 8px 24px rgba(0,0,0,.25);
+    }
+    .divider {
+      width: 56px; height: 4px;
+      background: linear-gradient(90deg, var(--green), var(--gold));
+      border-radius: 2px;
+      margin: 0 auto 24px;
+    }
+
+    /* ===== NAVBAR ===== */
+    #navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(255,255,255,.97);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(13,27,75,.08);
+      transition: box-shadow var(--transition);
+    }
+    #navbar.scrolled { box-shadow: var(--shadow); }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 68px;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .nav-logo-icon {
+      width: 40px; height: 40px;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gold);
+      font-size: 1.2rem; font-weight: 800;
+    }
+    .nav-logo-img { height: 64px; width: auto; display: block; }
+    .nav-logo-text { font-weight: 800; font-size: 1.15rem; color: var(--navy); }
+    .nav-logo-text span { color: var(--green); }
+    .nav-links {
+      display: flex; align-items: center; gap: 4px;
+    }
+    .nav-links a {
+      padding: 8px 14px; border-radius: 8px;
+      font-weight: 500; font-size: .95rem; color: var(--navy);
+      transition: background var(--transition), color var(--transition);
+    }
+    .nav-links a:hover { background: var(--bg-section); color: var(--green); }
+    @keyframes nav-cta-glow {
+      0%, 100% { box-shadow: 0 4px 16px rgba(240,165,0,.45), 0 0 8px rgba(240,165,0,.3); }
+      50% { box-shadow: 0 4px 24px rgba(240,165,0,.75), 0 0 24px rgba(240,165,0,.6), 0 0 40px rgba(240,165,0,.3); }
+    }
+    .nav-cta { margin-left: 8px; }
+    .nav-flags {
+      display: flex; flex-direction: column; align-items: center;
+      font-size: 1.25rem; line-height: 1.2; margin-right: 2px;
+    }
+    .nav-links .nav-cta {
+      padding: 10px 26px;
+      font-size: .9rem;
+      font-weight: 800;
+      border-radius: 100px;
+      box-shadow: 0 4px 16px rgba(240,165,0,.45), 0 0 8px rgba(240,165,0,.3);
+      letter-spacing: .02em;
+      transition: transform var(--transition), box-shadow var(--transition), filter var(--transition);
+      animation: nav-cta-glow 2s ease-in-out infinite;
+    }
+    .nav-links .nav-cta:hover {
+      background: #e09400;
+      color: var(--navy);
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 10px 28px rgba(240,165,0,.75), 0 0 32px rgba(240,165,0,.6);
+      filter: brightness(1.07);
+      animation: none;
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer;
+      padding: 8px;
+    }
+    .hamburger span {
+      display: block; width: 24px; height: 2px;
+      background: var(--navy); border-radius: 2px;
+      transition: transform var(--transition), opacity var(--transition);
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu {
+      display: none;
+      position: fixed; top: 68px; left: 0; right: 0;
+      background: #fff;
+      border-bottom: 1px solid rgba(13,27,75,.08);
+      box-shadow: var(--shadow-lg);
+      padding: 16px 20px 24px;
+      z-index: 999;
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu a {
+      display: block; padding: 13px 16px;
+      border-radius: 10px; font-weight: 500;
+      color: var(--navy); margin-bottom: 4px;
+    }
+    .mobile-menu a:hover { background: var(--bg-section); color: var(--green); }
+    .mobile-menu .btn { width: 100%; justify-content: center; margin-top: 8px; }
+
+    /* ===== HERO ===== */
+    #hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #2a4099 100%);
+      display: flex; align-items: center;
+      padding-top: 68px;
+      position: relative; overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .hero-shapes {
+      position: absolute; inset: 0; overflow: hidden; pointer-events: none;
+    }
+    .shape {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,255,255,.04);
+    }
+    .shape-1 { width: 500px; height: 500px; top: -100px; right: -150px; }
+    .shape-2 { width: 300px; height: 300px; bottom: -80px; left: -80px; }
+    .shape-3 { width: 200px; height: 200px; top: 40%; right: 10%; background: rgba(240,165,0,.06); }
+    .hero-content {
+      position: relative; z-index: 2;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+    }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,.12);
+      color: var(--gold-light);
+      font-size: .8rem; font-weight: 600; letter-spacing: .06em;
+      padding: 6px 16px; border-radius: 100px;
+      border: 1px solid rgba(255,209,102,.25);
+      margin-bottom: 20px;
+    }
+    .hero-tag::before { content: '★'; }
+    .hero-title {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 800; color: #fff;
+      line-height: 1.2; margin-bottom: 12px;
+    }
+    .hero-title span { color: var(--gold); }
+    .hero-subtitle {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: rgba(255,255,255,.8);
+      margin-bottom: 32px;
+    }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+    .hero-stats {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+      margin-top: 40px;
+    }
+    .hero-stat {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: var(--radius);
+      padding: 16px; text-align: center;
+    }
+    .hero-stat-num {
+      font-size: 1.6rem; font-weight: 800; color: var(--gold);
+      display: block; line-height: 1;
+    }
+    .hero-stat-label { font-size: .75rem; color: rgba(255,255,255,.7); margin-top: 4px; }
+    .hero-card {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 20px; padding: 32px;
+      backdrop-filter: blur(10px);
+    }
+    .hero-card-title {
+      color: var(--gold-light); font-weight: 700; font-size: 1.05rem;
+      margin-bottom: 20px; padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255,255,255,.15);
+    }
+    .event-item {
+      display: flex; gap: 16px; align-items: flex-start;
+      margin-bottom: 20px;
+    }
+    .event-item:last-child { margin-bottom: 0; }
+    .event-icon {
+      flex-shrink: 0; width: 44px; height: 44px;
+      background: rgba(240,165,0,.35);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      color: var(--gold-light);
+    }
+    .event-label { color: rgba(255,255,255,.6); font-size: .8rem; margin-bottom: 2px; }
+    .event-title { color: #fff; font-weight: 700; font-size: .95rem; }
+    .event-date { color: var(--gold); font-size: .85rem; font-weight: 600; margin-top: 2px; }
+
+    /* ===== ABOUT ===== */
+    #about {
+      background-color: var(--bg-light);
+      background-image:
+        linear-gradient(rgba(45,138,78,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(45,138,78,.045) 1px, transparent 1px);
+      background-size: 52px 52px;
+    }
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start;
+    }
+    .about-text .section-title { text-align: left; }
+    .about-text .divider { margin: 0 0 24px; }
+    .about-text p {
+      color: var(--text-muted); margin-bottom: 16px; font-size: .95rem;
+    }
+    .about-subjects { margin-top: 24px; display: flex; flex-direction: column; gap: 16px; }
+    .subject-card {
+      background: #fff; border-radius: var(--radius); padding: 20px 24px;
+      border-left: 4px solid var(--green);
+      box-shadow: var(--shadow);
+    }
+    .subject-card.english { border-left-color: #1a7abf; }
+    .subject-card.science { border-left-color: #9c4dcc; }
+    .subject-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .subject-card-icon { font-size: 1.4rem; }
+    .subject-card-title { font-weight: 800; color: var(--navy); font-size: 1rem; }
+    .subject-card-sub { font-size: .78rem; color: var(--text-muted); font-weight: 500; }
+    .subject-card-desc { font-size: .85rem; color: var(--text-muted); line-height: 1.6; }
+    .about-highlight {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      border-radius: 20px; padding: 32px; color: #fff;
+      position: sticky; top: calc(var(--navbar-height, 68px) + 20px);
+    }
+    .about-highlight h3 {
+      color: var(--gold-light); font-size: 1.1rem; font-weight: 700; margin-bottom: 20px;
+    }
+    .purpose-item {
+      display: flex; gap: 16px; margin-bottom: 20px; align-items: flex-start;
+    }
+    .purpose-item:last-child { margin-bottom: 0; }
+    .purpose-num {
+      flex-shrink: 0;
+      width: 36px; height: 36px;
+      background: rgba(240,165,0,.2);
+      border-radius: 10px;
+      color: var(--gold-light); font-weight: 800; font-size: .85rem;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .purpose-title { font-weight: 700; color: #fff; font-size: .95rem; margin-bottom: 4px; }
+    .purpose-desc { color: rgba(255,255,255,.65); font-size: .85rem; }
+
+    /* ===== PURPOSE TABS ===== */
+    #purpose {
+      background-image:
+        linear-gradient(rgba(45,138,78,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(45,138,78,.04) 1px, transparent 1px),
+        linear-gradient(160deg, #f4fbf7 0%, #eef5ff 100%);
+      background-size: 52px 52px, 52px 52px, auto;
+    }
+    .purpose-tabs-wrap {
+      display: flex; gap: 6px; justify-content: center; flex-wrap: wrap;
+      background: #fff; padding: 6px; border-radius: 100px;
+      width: fit-content; margin: 0 auto 48px;
+      box-shadow: 0 2px 16px rgba(13,27,75,.10); border: 1px solid rgba(13,27,75,.06);
+    }
+    .purpose-tab-btn {
+      padding: 10px 26px; border-radius: 100px;
+      border: none;
+      font-weight: 600; font-size: .95rem; cursor: pointer;
+      transition: all var(--transition);
+      background: transparent; color: var(--text-muted);
+    }
+    .purpose-tab-btn.active { background: var(--green); color: #fff; box-shadow: 0 4px 14px rgba(45,138,78,.35); }
+    .purpose-tab-btn:not(.active):hover { background: rgba(45,138,78,.08); color: var(--green); }
+    .purpose-tab-btn.english.active { background: #1a7abf; box-shadow: 0 4px 14px rgba(26,122,191,.35); }
+    .purpose-tab-btn.english:not(.active):hover { background: rgba(26,122,191,.08); color: #1a7abf; }
+    .purpose-tab-btn.science.active { background: #9c4dcc; box-shadow: 0 4px 14px rgba(156,77,204,.35); }
+    .purpose-tab-btn.science:not(.active):hover { background: rgba(156,77,204,.08); color: #9c4dcc; }
+    .purpose-panel { display: none; }
+    .purpose-panel.active { display: block; }
+    .purpose-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
+    }
+    .purpose-goal-card {
+      background: #fff; border-radius: 16px;
+      padding: 32px 24px 26px; position: relative; overflow: hidden;
+      border: 1px solid rgba(13,27,75,.07);
+      box-shadow: 0 4px 20px rgba(13,27,75,.08), 0 1px 3px rgba(13,27,75,.04);
+      transition: transform var(--transition), box-shadow var(--transition);
+      display: flex; gap: 20px; align-items: flex-start;
+    }
+    .purpose-goal-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, var(--green), var(--green-light));
+      border-radius: 16px 16px 0 0;
+    }
+    .purpose-goal-card.english::before { background: linear-gradient(90deg, #1a7abf, #56b0f0); }
+    .purpose-goal-card.science::before { background: linear-gradient(90deg, #9c4dcc, #c47ee8); }
+    .purpose-goal-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(45,138,78,.14), 0 4px 12px rgba(13,27,75,.07); }
+    .purpose-goal-card.english:hover { box-shadow: 0 16px 40px rgba(26,122,191,.15), 0 4px 12px rgba(13,27,75,.07); }
+    .purpose-goal-card.science:hover { box-shadow: 0 16px 40px rgba(156,77,204,.15), 0 4px 12px rgba(13,27,75,.07); }
+    .purpose-goal-icon-wrap {
+      width: 64px; height: 64px; border-radius: 18px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, rgba(45,138,78,.14), rgba(45,138,78,.05));
+      box-shadow: 0 4px 16px rgba(45,138,78,.20);
+    }
+    .purpose-goal-icon-wrap i { font-size: 1.55rem; color: var(--green); }
+    .purpose-goal-card.english .purpose-goal-icon-wrap { background: linear-gradient(135deg, rgba(26,122,191,.14), rgba(26,122,191,.05)); box-shadow: 0 4px 16px rgba(26,122,191,.20); }
+    .purpose-goal-card.english .purpose-goal-icon-wrap i { color: #1a7abf; }
+    .purpose-goal-card.science .purpose-goal-icon-wrap { background: linear-gradient(135deg, rgba(156,77,204,.14), rgba(156,77,204,.05)); box-shadow: 0 4px 16px rgba(156,77,204,.20); }
+    .purpose-goal-card.science .purpose-goal-icon-wrap i { color: #9c4dcc; }
+    .purpose-goal-number {
+      position: absolute; top: 14px; right: 18px;
+      font-size: .75rem; font-weight: 800; letter-spacing: .06em;
+      color: rgba(45,138,78,.22);
+    }
+    .purpose-goal-card.english .purpose-goal-number { color: rgba(26,122,191,.22); }
+    .purpose-goal-card.science .purpose-goal-number { color: rgba(156,77,204,.22); }
+    .purpose-goal-content { flex: 1; min-width: 0; }
+    .purpose-goal-title { font-weight: 700; color: var(--navy); font-size: 1rem; margin-bottom: 8px; line-height: 1.4; }
+    .purpose-goal-desc { font-size: .875rem; color: var(--text-muted); line-height: 1.7; }
+
+    /* ===== TIMELINE ===== */
+    #timeline {
+      background-color: var(--bg-light);
+      background-image:
+        linear-gradient(rgba(45,138,78,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(45,138,78,.045) 1px, transparent 1px);
+      background-size: 52px 52px;
+    }
+    .timeline-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+    }
+    .timeline-card {
+      border-radius: 20px; overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .timeline-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .timeline-card-header {
+      padding: 24px 28px;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+    }
+    .timeline-card-header.international {
+      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%);
+    }
+    .timeline-round {
+      color: rgba(255,255,255,.7); font-size: .8rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .08em; margin-bottom: 6px;
+    }
+    .timeline-date {
+      color: var(--gold-light); font-size: 1.6rem; font-weight: 800; line-height: 1.2;
+    }
+    .timeline-card-body { padding: 24px 28px; background: #fff; }
+    .timeline-detail {
+      display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px;
+    }
+    .timeline-detail:last-child { margin-bottom: 0; }
+    .timeline-detail-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+    .timeline-detail-label {
+      color: var(--text-muted); font-size: .8rem; margin-bottom: 2px;
+    }
+    .timeline-detail-value { color: var(--navy); font-weight: 600; font-size: .9rem; }
+    .timeline-cta { margin-top: 48px; text-align: center; }
+
+    /* ===== AWARDS ===== */
+    #awards {
+      background-color: var(--bg-section);
+      background-image:
+        linear-gradient(rgba(45,138,78,.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(45,138,78,.05) 1px, transparent 1px);
+      background-size: 52px 52px;
+    }
+    .awards-tabs {
+      display: flex; gap: 8px; justify-content: center; margin-bottom: 40px; flex-wrap: wrap;
+    }
+    .tab-btn {
+      padding: 10px 28px; border-radius: 100px;
+      border: 2px solid transparent;
+      font-weight: 600; font-size: .95rem; cursor: pointer;
+      transition: all var(--transition);
+      background: #fff; color: var(--text-muted);
+    }
+    .tab-btn.active { background: var(--navy); color: #fff; border-color: var(--navy); }
+    .tab-btn:not(.active):hover { border-color: var(--navy); color: var(--navy); }
+    .awards-panel { display: none; }
+    .awards-panel.active { display: block; }
+    .awards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .award-card {
+      background: #fff; border-radius: var(--radius);
+      border: 2px solid transparent;
+      padding: 24px; box-shadow: var(--shadow);
+      transition: transform var(--transition), box-shadow var(--transition);
+      position: relative; overflow: hidden;
+    }
+    .award-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 4px;
+    }
+    .award-card.gold::before { background: linear-gradient(90deg, #ffd700, #ffb300); }
+    .award-card.silver::before { background: linear-gradient(90deg, #c0c0c0, #a8a8a8); }
+    .award-card.bronze::before { background: linear-gradient(90deg, #cd7f32, #b8661e); }
+    .award-card.merit::before { background: linear-gradient(90deg, var(--green), var(--green-light)); }
+    .award-card.special::before { background: linear-gradient(90deg, var(--navy), var(--navy-light)); }
+    .award-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .award-medal { font-size: 2rem; margin-bottom: 12px; }
+    .award-title { font-weight: 800; color: var(--navy); font-size: 1.05rem; margin-bottom: 4px; }
+    .award-condition { font-size: .8rem; color: var(--green); font-weight: 600; margin-bottom: 12px; }
+    .award-prizes { list-style: none; padding: 0; }
+    .award-prizes li {
+      display: flex; align-items: flex-start; gap: 8px;
+      font-size: .85rem; color: var(--text-muted);
+      padding: 4px 0; border-bottom: 1px solid #f3f4f6;
+    }
+    .award-prizes li:last-child { border-bottom: none; }
+    .award-prizes li::before { content: '✓'; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+    /* Placeholder card for TBD info */
+    .info-pending {
+      background: #fff; border-radius: var(--radius);
+      border: 2px dashed rgba(45,138,78,.3);
+      padding: 32px 24px; text-align: center;
+      color: var(--text-muted);
+    }
+    .info-pending-icon { font-size: 2.5rem; margin-bottom: 12px; }
+    .info-pending-title { font-weight: 700; color: var(--navy); font-size: 1rem; margin-bottom: 8px; }
+    .info-pending-text { font-size: .85rem; line-height: 1.6; }
+
+    /* ===== EXAM INFO ===== */
+    #curriculum {
+      background-color: #fff;
+      background-image:
+        linear-gradient(rgba(13,27,75,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(13,27,75,.03) 1px, transparent 1px);
+      background-size: 52px 52px;
+    }
+    .curriculum-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .info-card {
+      background: var(--bg-light); border-radius: 20px; padding: 32px;
+    }
+    .info-card h3 {
+      font-weight: 700; color: var(--navy); font-size: 1.1rem;
+      margin-bottom: 20px; display: flex; align-items: center; gap: 10px;
+    }
+    .info-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,.06);
+      font-size: .9rem;
+    }
+    .info-row:last-child { border-bottom: none; }
+    .info-row-label { color: var(--text-muted); }
+    .info-row-value { font-weight: 600; color: var(--navy); text-align: right; max-width: 55%; }
+    .topic-list {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;
+    }
+    .topic-tag {
+      background: var(--bg-section); color: var(--navy-light);
+      border-radius: 100px; padding: 6px 14px; font-size: .8rem; font-weight: 600;
+    }
+    .sample-btn-wrap { text-align: center; margin-top: 24px; }
+    .subject-info-tabs {
+      display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap;
+    }
+    .subject-info-btn {
+      padding: 7px 18px; border-radius: 100px;
+      border: 2px solid rgba(0,0,0,.08);
+      font-weight: 600; font-size: .85rem; cursor: pointer;
+      transition: all var(--transition);
+      background: #fff; color: var(--text-muted);
+    }
+    .subject-info-btn.active { background: var(--green); color: #fff; border-color: var(--green); }
+    .subject-info-panel { display: none; }
+    .subject-info-panel.active { display: block; }
+    /* Level table inside exam structure panels */
+    .level-table { width: 100%; border-collapse: collapse; font-size: .85rem; border-radius: 12px; overflow: hidden; }
+    .level-table thead tr { background: var(--navy); color: #fff; }
+    .level-table thead th { padding: 10px 12px; text-align: left; font-weight: 700; font-size: .8rem; letter-spacing: .03em; }
+    .level-table tbody tr { border-bottom: 1px solid rgba(0,0,0,.06); transition: background var(--transition); }
+    .level-table tbody tr:last-child { border-bottom: none; }
+    .level-table tbody tr:hover { background: rgba(45,138,78,.05); }
+    .level-table tbody td { padding: 10px 12px; color: var(--navy); vertical-align: middle; }
+    .level-badge {
+      display: inline-block; padding: 3px 12px; border-radius: 100px;
+      font-weight: 800; font-size: .8rem; letter-spacing: .04em; white-space: nowrap;
+    }
+    .level-badge.keo { background: rgba(26,122,191,.12); color: #1a7abf; }
+    .level-badge.kmo { background: rgba(45,138,78,.12); color: var(--green); }
+    .level-badge.kso { background: rgba(156,77,204,.12); color: #9c4dcc; }
+    .topic-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 5px; }
+    .topic-tag { font-size: .7rem; padding: 2px 8px; border-radius: 100px; white-space: nowrap; font-weight: 600; }
+    .topic-tag.kmo { background: rgba(45,138,78,.1); color: var(--green); }
+    .topic-tag.keo { background: rgba(26,122,191,.1); color: #1a7abf; }
+    .topic-tag.kso { background: rgba(156,77,204,.1); color: #9c4dcc; }
+    .cefr-badge {
+      display: inline-block; padding: 2px 9px; border-radius: 6px;
+      font-weight: 700; font-size: .75rem; background: rgba(26,122,191,.1); color: #1a7abf;
+    }
+
+    /* ===== SAMPLE EXAMS ===== */
+    #samples {
+      background-color: var(--bg-section);
+      background-image:
+        linear-gradient(rgba(45,138,78,.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(45,138,78,.05) 1px, transparent 1px);
+      background-size: 52px 52px;
+    }
+    .samples-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .sample-card {
+      border-radius: 20px; overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .sample-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .sample-card-header {
+      padding: 32px 28px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      min-height: 160px; text-align: center;
+    }
+    .sample-card-header.math {
+      background: linear-gradient(135deg, var(--navy) 0%, #2a4099 100%);
+    }
+    .sample-card-header.english {
+      background: linear-gradient(135deg, #1a7abf 0%, #0d5a94 100%);
+    }
+    .sample-card-header.science {
+      background: linear-gradient(135deg, #7b2fa0 0%, #9c4dcc 100%);
+    }
+    .sample-card-icon { font-size: 2.8rem; margin-bottom: 10px; }
+    .sample-card-title { font-weight: 800; color: #fff; font-size: 1.1rem; }
+    .sample-card-sub { font-size: .8rem; color: rgba(255,255,255,.75); margin-top: 4px; }
+    .sample-card-body { padding: 20px 24px; background: #fff; text-align: center; }
+    .sample-card-desc { font-size: .88rem; color: var(--text-muted); margin-bottom: 16px; line-height: 1.6; }
+    .btn-coming-soon { width: 100%; justify-content: center; font-size: .9rem; opacity: .8; cursor: default; transition: opacity var(--transition), background var(--transition), color var(--transition), border-color var(--transition); }
+    .btn-coming-soon:hover { opacity: 1; cursor: default; }
+    .btn-outline-blue { color: #1a7abf; border-color: #1a7abf; }
+    .btn-outline-blue:hover { background: #1a7abf; color: #fff; border-color: #1a7abf; }
+    .btn-outline-purple { color: #9c4dcc; border-color: #9c4dcc; }
+    .btn-outline-purple:hover { background: #9c4dcc; color: #fff; border-color: #9c4dcc; }
+
+    /* ===== REGISTRATION ===== */
+    #registration {
+      background: linear-gradient(160deg, #f0faf4 0%, #fff 55%, #f4f8ff 100%);
+      position: relative; overflow: hidden;
+    }
+    #registration::before {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(45,138,78,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(45,138,78,.04) 1px, transparent 1px);
+      background-size: 52px 52px;
+    }
+    .reg-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .reg-fee-card {
+      background: linear-gradient(145deg, #1a6e3c 0%, #2d8a4e 55%, #3aab65 100%);
+      border-radius: 20px; padding: 32px; color: #fff;
+      box-shadow: 0 12px 48px rgba(45,138,78,.30);
+      position: relative; overflow: hidden;
+    }
+    .reg-fee-card::after {
+      content: ''; position: absolute;
+      width: 220px; height: 220px;
+      background: rgba(255,255,255,.06);
+      border-radius: 50%;
+      top: -60px; right: -60px;
+      pointer-events: none;
+    }
+    .reg-fee-card h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 20px; color: #fff; position: relative; }
+    .fee-item {
+      display: flex; gap: 16px; align-items: center;
+      background: rgba(255,255,255,.12);
+      border-radius: var(--radius); padding: 16px 20px; margin-bottom: 12px;
+    }
+    .fee-flag { font-size: 1.5rem; }
+    .fee-label { font-size: .8rem; color: rgba(255,255,255,.8); margin-bottom: 2px; }
+    .fee-amount { font-size: 1.2rem; font-weight: 800; color: var(--gold-light); }
+    .fee-note {
+      font-size: .8rem; color: rgba(255,255,255,.65);
+      background: rgba(0,0,0,.15); border-radius: 8px;
+      padding: 12px 16px; margin-top: 16px;
+    }
+    .bank-card {
+      background: #fff;
+      border-radius: 20px; padding: 32px;
+      box-shadow: 0 8px 40px rgba(13,27,75,.10);
+      border: 1px solid rgba(45,138,78,.10);
+    }
+    .bank-card h3 { font-size: 1.1rem; font-weight: 800; color: var(--navy); margin-bottom: 20px; }
+    .bank-info { margin-bottom: 20px; }
+    .bank-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 12px 16px; border-radius: 10px; background: #fff;
+      margin-bottom: 8px; border: 1px solid rgba(0,0,0,.06);
+    }
+    .bank-row-label { font-size: .8rem; color: var(--text-muted); }
+    .bank-row-value { font-weight: 700; color: var(--navy); font-size: .9rem; }
+    .transfer-note {
+      background: #fff8e1; border-left: 3px solid var(--gold);
+      padding: 14px 16px; border-radius: 0 10px 10px 0;
+      font-size: .82rem; color: #6b5a00;
+    }
+    .transfer-note strong { color: #5a4400; display: block; margin-bottom: 6px; }
+    .reg-buttons {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 24px;
+    }
+    .reg-buttons .btn {
+      justify-content: center; font-size: 1.05rem; font-weight: 800;
+      width: 100%; white-space: nowrap; padding: 11px 14px; border-radius: 12px;
+      letter-spacing: .01em;
+    }
+    .btn-reg-individual {
+      background: linear-gradient(135deg, #fcd34d 0%, #f59e0b 100%);
+      color: #1c1917; border: none;
+      box-shadow: 0 4px 16px rgba(245,158,11,.50);
+    }
+    .btn-reg-individual:hover {
+      background: linear-gradient(135deg, #fde68a 0%, #fbbf24 100%);
+      transform: translateY(-4px) scale(1.04);
+      box-shadow: 0 10px 32px rgba(245,158,11,.70);
+    }
+    .btn-reg-school {
+      background: transparent;
+      color: var(--green-dark); border: 2px solid var(--green);
+    }
+    .btn-reg-school:hover {
+      background: var(--green);
+      color: #fff; border-color: var(--green);
+      transform: translateY(-4px) scale(1.04);
+      box-shadow: 0 10px 32px rgba(45,138,78,.35);
+    }
+
+    /* ===== PARTNERS ===== */
+    #partners {
+      background-color: var(--bg-light);
+      background-image:
+        linear-gradient(rgba(45,138,78,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(45,138,78,.04) 1px, transparent 1px);
+      background-size: 52px 52px;
+    }
+    .partners-grid {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;
+    }
+    .partner-card {
+      width: 160px; height: 80px;
+      background: #fff; border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      display: flex; align-items: center; justify-content: center;
+      padding: 12px; border: 1px solid rgba(0,0,0,.05);
+      font-weight: 700; font-size: .85rem; color: var(--text-muted);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .partner-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); color: var(--navy); }
+
+    /* ===== GALLERY ===== */
+    #gallery {
+      background-color: #fff;
+      background-image:
+        linear-gradient(rgba(13,27,75,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(13,27,75,.03) 1px, transparent 1px);
+      background-size: 52px 52px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .gallery-item {
+      border-radius: var(--radius); overflow: hidden;
+      aspect-ratio: 4/3;
+      background: var(--bg-section);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text-muted); font-size: .85rem;
+      border: 2px dashed rgba(0,0,0,.1);
+    }
+    .gallery-item img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+      transition: transform .35s ease;
+    }
+    .gallery-item img:hover { transform: scale(1.05); }
+    .gallery-item span { text-align: center; padding: 16px; }
+
+    /* ===== ORGANIZER ===== */
+    #organizer {
+      background-color: var(--bg-section);
+      background-image:
+        linear-gradient(rgba(45,138,78,.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(45,138,78,.05) 1px, transparent 1px);
+      background-size: 52px 52px;
+    }
+    .organizer-card {
+      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 60%, var(--green-light) 100%);
+      border-radius: 20px; padding: 48px;
+      text-align: center; color: #fff;
+      max-width: 700px; margin: 0 auto;
+      box-shadow: 0 12px 48px rgba(45,138,78,.35);
+    }
+    .organizer-logo {
+      width: 80px; height: 80px;
+      background: rgba(240,165,0,.2);
+      border-radius: 20px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 2rem;
+    }
+    .organizer-logo-img { max-width: 200px; height: auto; display: block; margin: 0 auto 20px; }
+    .organizer-name {
+      font-size: 1.3rem; font-weight: 800; color: var(--gold-light); margin-bottom: 8px;
+    }
+    .organizer-address { color: rgba(255,255,255,.7); font-size: .9rem; margin-bottom: 24px; }
+    .contact-links {
+      display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;
+    }
+    .contact-link {
+      display: flex; align-items: center; gap: 8px;
+      color: #fff; padding: 10px 20px; border-radius: 100px;
+      font-size: .88rem; font-weight: 600;
+      transition: transform var(--transition);
+    }
+    .contact-link:hover { transform: translateY(-2px); }
+
+    /* ===== FOOTER ===== */
+    #footer {
+      background: #fff;
+      color: #1a1a2e;
+      padding: 48px 0 24px;
+      border-top: 3px solid var(--navy-light);
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer-brand-title {
+      color: var(--navy); font-weight: 800; font-size: 1rem;
+      text-transform: uppercase; letter-spacing: .04em; margin-bottom: 10px;
+    }
+    .footer-company-name {
+      font-size: 1.15rem; font-weight: 600; text-transform: uppercase;
+      color: #1a1a2e; margin-bottom: 14px; line-height: 1.4;
+    }
+    .footer-brand-address { font-size: .88rem; line-height: 1.7; margin-bottom: 10px; }
+    .footer-contact-heading { font-weight: 700; font-size: .9rem; margin-bottom: 8px; color: #1a1a2e; }
+    .footer-contact-list { list-style: disc; padding-left: 20px; }
+    .footer-contact-list li { font-size: .88rem; padding: 3px 0; color: #1a1a2e; line-height: 1.6; }
+    .footer-contact-list li a { color: var(--green); text-decoration: underline; }
+    .footer-col h4 {
+      color: var(--navy); font-weight: 800; font-size: 1rem;
+      text-transform: uppercase; letter-spacing: .04em; margin-bottom: 16px;
+    }
+    .footer-col ul li a {
+      color: #1a1a2e;
+      font-size: .95rem; padding: 6px 0; display: block;
+      transition: color var(--transition);
+    }
+    .footer-col ul li a:hover { color: var(--green); }
+    .footer-logos {
+      display: flex; flex-wrap: wrap; align-items: flex-start;
+      gap: 20px; padding-top: 4px;
+    }
+    .footer-logo-img { max-height: 90px; width: auto; display: block; }
+    .footer-logo-stack { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+    .footer-logo-stacked { max-height: none; width: 180px; height: auto; }
+    .footer-bottom {
+      border-top: 1px solid rgba(13,27,75,.15);
+      padding-top: 24px;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 12px;
+    }
+    .footer-bottom p { font-size: .82rem; color: var(--text-muted); }
+    .footer-bottom span { color: var(--navy); font-weight: 700; }
+
+    /* ===== FLOATING CTA ===== */
+    .floating-cta {
+      position: fixed; bottom: 24px; right: 24px;
+      z-index: 900;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(45,138,78,.4); }
+      50% { box-shadow: 0 0 0 12px rgba(45,138,78,0); }
+    }
+
+    /* ===== FLOATING ZALO BUTTON ===== */
+    .zalo-float {
+      position: fixed; bottom: 96px; right: 24px;
+      z-index: 900;
+      display: flex; align-items: center; gap: 10px;
+      background: #0068ff; color: #fff;
+      padding: 12px 20px; border-radius: 100px;
+      font-size: .9rem; font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 18px rgba(0,104,255,.45);
+      transition: transform .2s ease, box-shadow .2s ease;
+      animation: zalo-pulse 2.4s infinite;
+    }
+    .zalo-float:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,104,255,.55);
+      color: #fff;
+    }
+    .zalo-float img {
+      width: 26px; height: 26px; border-radius: 6px; flex-shrink: 0;
+    }
+    .zalo-float-label { white-space: nowrap; }
+    @keyframes zalo-pulse {
+      0%, 100% { box-shadow: 0 4px 18px rgba(0,104,255,.45); }
+      50% { box-shadow: 0 4px 24px rgba(0,104,255,.75), 0 0 0 10px rgba(0,104,255,0); }
+    }
+    @media (max-width: 600px) {
+      .zalo-float { bottom: 88px; right: 16px; padding: 11px 16px; font-size: .82rem; }
+      .zalo-float img { width: 22px; height: 22px; }
+    }
+
+    /* ===== SCROLL REVEAL ===== */
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .hero-content { grid-template-columns: 1fr; gap: 40px; }
+      .hero-card { display: none; }
+      .about-grid, .curriculum-grid, .timeline-grid, .reg-grid { grid-template-columns: 1fr; }
+      .about-highlight { position: static; }
+      .samples-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-logos { flex-direction: row; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .section { padding: 56px 0; }
+      .hero-stats { grid-template-columns: 1fr 1fr; }
+      .awards-grid { grid-template-columns: 1fr; }
+      .purpose-grid { grid-template-columns: 1fr; }
+      .reg-buttons { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .floating-cta { bottom: 16px; right: 16px; }
+      .btn { padding: 12px 24px; font-size: .9rem; }
+      .hero-actions { flex-direction: column; }
+    }
+
+    /* ===== MATH DECORATIVE BACKGROUND ELEMENTS ===== */
+    #about, #purpose, #timeline, #awards, #curriculum, #samples,
+    #partners, #gallery, #organizer { position: relative; }
+    .math-deco {
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      overflow: hidden; pointer-events: none; z-index: 0;
+    }
+    .math-deco + .container { position: relative; z-index: 1; }
+    .math-sym {
+      position: absolute;
+      font-family: 'Georgia', 'Times New Roman', serif;
+      font-weight: 700; line-height: 1; user-select: none;
+      opacity: 0.065;
+    }
+    .math-ball {
+      position: absolute; border-radius: 50%;
+    }
+    .math-ruler-svg, .math-compass-svg {
+      position: absolute;
+    }
+    @keyframes mfloat1 {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-16px) rotate(5deg); }
+    }
+    @keyframes mfloat2 {
+      0%, 100% { transform: translateY(-8px) rotate(-4deg); }
+      50% { transform: translateY(10px) rotate(4deg); }
+    }
+    @keyframes mfloat3 {
+      0%, 100% { transform: rotate(-6deg) scale(1); }
+      50% { transform: rotate(6deg) scale(1.07); }
+    }
+    @keyframes mfloat4 {
+      0%, 100% { transform: translateX(0) translateY(0); }
+      33% { transform: translateX(10px) translateY(-12px); }
+      66% { transform: translateX(-8px) translateY(7px); }
+    }
+    .mf1 { animation: mfloat1 7s ease-in-out infinite; }
+    .mf2 { animation: mfloat2 9s ease-in-out infinite; }
+    .mf3 { animation: mfloat3 11s ease-in-out infinite; }
+    .mf4 { animation: mfloat4 8s ease-in-out infinite; }
+    .mf5 { animation: mfloat1 6s ease-in-out infinite reverse; }
+    .mf6 { animation: mfloat2 10s ease-in-out infinite 1.5s; }
+    .mf7 { animation: mfloat3 8s ease-in-out infinite 2.5s; }
+    .mf8 { animation: mfloat4 12s ease-in-out infinite 0.8s; }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="https://koala.letrendolympiad.edu.vn/#hero" class="nav-logo">
+        <img src="./KEO 2026 – Kỳ thi Olympic Toán học, Tiếng Anh và Khoa học KOALA Australia_files/LETRENg-06.png" alt="Letrend" class="nav-logo-img">
+        <img src="./KEO 2026 – Kỳ thi Olympic Toán học, Tiếng Anh và Khoa học KOALA Australia_files/KEo.png" alt="KEo" class="nav-logo-img">
+      </a>
+      <div class="nav-links">
+        <a href="https://koala.letrendolympiad.edu.vn/#about">Về kỳ thi</a>
+        <a href="https://koala.letrendolympiad.edu.vn/#curriculum">Thông tin đề thi</a>
+        <a href="https://koala.letrendolympiad.edu.vn/#registration">Đăng ký</a>
+        <a href="https://koala.letrendolympiad.edu.vn/#organizer">Liên hệ</a>
+        <div class="nav-flags"><span>🇦🇺</span><span>🇻🇳</span></div>
+        <a href="https://koala.letrendolympiad.edu.vn/#registration" class="btn btn-gold nav-cta">Đăng ký ngay</a>
+      </div>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="https://koala.letrendolympiad.edu.vn/#about" onclick="closeMobileMenu()">Về kỳ thi</a>
+  <a href="https://koala.letrendolympiad.edu.vn/#curriculum" onclick="closeMobileMenu()">Thông tin đề thi</a>
+  <a href="https://koala.letrendolympiad.edu.vn/#registration" onclick="closeMobileMenu()">Đăng ký</a>
+  <a href="https://koala.letrendolympiad.edu.vn/#organizer" onclick="closeMobileMenu()">Liên hệ</a>
+  <a href="https://koala.letrendolympiad.edu.vn/#registration" class="btn btn-gold" onclick="closeMobileMenu()">Đăng ký ngay</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <div class="hero-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="hero-tag"><i class="fa-solid fa-earth-asia"></i> Kỳ thi Olympic Quốc tế theo chuẩn Úc 2026</div>
+        <h1 class="hero-title">
+          Kỳ thi Olympic Toán học,<br>
+          Tiếng Anh và Khoa học<br>
+          <span>KOALA Australia</span>
+        </h1>
+        <p class="hero-subtitle">
+          KEO – Koala Excellence Olympiad: Nền tảng thi đấu quốc tế theo Chương trình
+          Giáo dục Quốc gia Úc dành cho học sinh lớp 1–12.
+        </p>
+        <div class="hero-actions">
+          <a href="https://koala.letrendolympiad.edu.vn/#registration" class="btn btn-gold"><i class="fa-solid fa-trophy"></i> Đăng ký ngay</a>
+          <a href="https://koala.letrendolympiad.edu.vn/#about" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.5);">Tìm hiểu thêm</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-num">3</span>
+            <div class="hero-stat-label">Môn thi: Toán Học, Tiếng Anh, Khoa Học</div>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">Cấp độ</span>
+            <div class="hero-stat-label">Lớp 1 đến lớp 12</div>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">2026</span>
+            <div class="hero-stat-label">Mùa thi mới</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-title"><i class="fa-solid fa-calendar-days"></i> Lịch thi KEO KOALA 2026</div>
+        <div class="event-item">
+          <div class="event-icon"><i class="fa-solid fa-laptop"></i></div>
+          <div>
+            <div class="event-label">VÒNG QUỐC GIA</div>
+            <div class="event-title">Thi trực tuyến (Online)</div>
+            <div class="event-date">17/05/2026</div>
+          </div>
+        </div>
+        <div class="event-item">
+          <div class="event-icon"><i class="fa-solid fa-earth-asia"></i></div>
+          <div>
+            <div class="event-label">VÒNG QUỐC TẾ</div>
+            <div class="event-title">Thi trực tiếp tại Việt Nam (Hà Nội - TP HCM) hoặc Macau</div>
+            <div class="event-date">26/07/2026</div>
+          </div>
+        </div>
+        <div style="margin-top:24px;">
+          <a href="https://koala.letrendolympiad.edu.vn/#registration" class="btn btn-primary" style="width:100%;justify-content:center;">Đăng ký thi ngay →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="section">
+  <div class="math-deco" aria-hidden="true">
+    <span class="math-sym mf1" style="font-size:7rem;color:var(--green);top:6%;left:1%">π</span>
+    <span class="math-sym mf3" style="font-size:5.5rem;color:var(--navy);top:18%;right:2%">Σ</span>
+    <span class="math-sym mf5" style="font-size:5rem;color:var(--green-dark);bottom:12%;left:4%">√</span>
+    <span class="math-sym mf7" style="font-size:4rem;color:var(--navy);bottom:22%;right:4%">∞</span>
+    <span class="math-sym mf2" style="font-size:4.5rem;color:var(--green);top:52%;left:44%">∫</span>
+    <span class="math-sym mf6" style="font-size:3.5rem;color:var(--navy);top:38%;left:22%">Δ</span>
+    <div class="math-ball mf4" style="width:110px;height:110px;top:-20px;right:28%;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.8),rgba(45,138,78,.28) 52%,rgba(45,138,78,.06));opacity:.18;"></div>
+    <div class="math-ball mf6" style="width:75px;height:75px;bottom:8%;left:38%;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.7),rgba(13,27,75,.22) 52%,rgba(13,27,75,.05));opacity:.16;"></div>
+    <div class="math-ball mf2" style="width:140px;height:140px;bottom:-50px;right:6%;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.6),rgba(240,165,0,.18) 52%,rgba(240,165,0,.04));opacity:.15;"></div>
+    <svg class="math-ruler-svg mf3" style="top:14%;left:48%;opacity:.07;color:var(--navy);transform:rotate(-12deg);" viewBox="0 0 220 44" width="220" height="44" fill="none">
+      <rect x="1" y="5" width="218" height="34" rx="4" stroke="currentColor" stroke-width="1.5" fill="rgba(13,27,75,.07)"></rect>
+      <line x1="20" y1="5" x2="20" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="40" y1="5" x2="40" y2="15" stroke="currentColor" stroke-width="1"></line>
+      <line x1="60" y1="5" x2="60" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="80" y1="5" x2="80" y2="15" stroke="currentColor" stroke-width="1"></line>
+      <line x1="100" y1="5" x2="100" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="120" y1="5" x2="120" y2="15" stroke="currentColor" stroke-width="1"></line>
+      <line x1="140" y1="5" x2="140" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="160" y1="5" x2="160" y2="15" stroke="currentColor" stroke-width="1"></line>
+      <line x1="180" y1="5" x2="180" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="200" y1="5" x2="200" y2="15" stroke="currentColor" stroke-width="1"></line>
+    </svg>
+    <svg class="math-compass-svg mf5" style="bottom:4%;left:7%;opacity:.07;color:var(--green-dark);" viewBox="0 0 80 110" width="80" height="110" fill="none">
+      <circle cx="40" cy="18" r="5" stroke="currentColor" stroke-width="2"></circle>
+      <line x1="40" y1="18" x2="17" y2="100" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+      <line x1="40" y1="18" x2="63" y2="100" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+      <line x1="28" y1="64" x2="52" y2="64" stroke="currentColor" stroke-width="1.5"></line>
+      <path d="M 21 88 Q 40 102 59 88" stroke="currentColor" stroke-width="1.5" fill="none"></path>
+    </svg>
+  </div>
+  <div class="container">
+    <span class="badge badge-centered">Giới thiệu</span>
+    <h2 class="section-title">Khái quát về kỳ thi</h2>
+    <div class="divider"></div>
+    <p class="section-sub">Nền tảng thi đấu quốc tế theo chuẩn Chương trình Giáo dục Quốc gia Úc, nhấn mạnh tư duy phản biện, sáng tạo và ứng dụng thực tiễn.</p>
+    <div class="about-grid reveal">
+      <div class="about-text">
+        <span class="badge">Về kỳ thi</span>
+        <h2 class="section-title" style="text-align:left;font-size:1.4rem;">Kỳ thi Olympic Toán học, Tiếng Anh và Khoa học KOALA Australia</h2>
+        <div class="divider" style="margin:0 0 24px;"></div>
+        <p>
+          <strong>KEO (Koala Excellence Olympiad)</strong> là nền tảng thi đấu quốc tế được phát triển bởi một nhóm các chuyên gia và cử nhân giáo dục người Úc. KEO tuân thủ nghiêm ngặt <strong>Chương trình Giáo dục Quốc gia Úc</strong>, vượt ra ngoài phương pháp học thuộc lòng truyền thống.
+        </p>
+        <p>
+          KEO nhấn mạnh <strong>tư duy phản biện</strong>, <strong>sự sáng tạo</strong> và <strong>ứng dụng thực tiễn</strong> trong bốn lĩnh vực riêng biệt, phù hợp với học sinh từ <strong>lớp 1 đến lớp 12</strong>.
+        </p>
+        <p>
+          Tại Việt Nam, <strong>Công ty Cổ phần Công nghệ Giáo dục Letrend</strong> là đơn vị đồng hành triển khai kỳ thi KEO KOALA.
+        </p>
+        <div class="about-subjects">
+          <div class="subject-card">
+            <div class="subject-card-header">
+              <div class="subject-card-icon"><i class="fa-solid fa-calculator" aria-hidden="true"></i></div>
+              <div>
+                <div class="subject-card-title">Olympic Toán học Koala (KMO)</div>
+                <div class="subject-card-sub">Koala Mathematics Olympiad</div>
+              </div>
+            </div>
+            <div class="subject-card-desc">
+              Giới thiệu triết lý "Toán học như cuộc sống", thách thức học sinh với <em>"Các câu hỏi theo ngữ cảnh Úc"</em> được thiết kế để kiểm tra khả năng suy luận logic trong các tình huống thực tế.
+            </div>
+          </div>
+          <div class="subject-card english">
+            <div class="subject-card-header">
+              <div class="subject-card-icon"><i class="fa-solid fa-book"></i></div>
+              <div>
+                <div class="subject-card-title">Olympic Tiếng Anh Koala (KEO)</div>
+                <div class="subject-card-sub">Koala English Olympiad</div>
+              </div>
+            </div>
+            <div class="subject-card-desc">
+              Một bài đánh giá tích hợp phù hợp với các tiêu chuẩn về khả năng đọc viết của Úc, kiểm tra kỹ năng đọc, chính tả và viết trong một bài thi duy nhất, tập trung vào sự xuất sắc về ngôn ngữ.
+            </div>
+          </div>
+          <div class="subject-card science">
+            <div class="subject-card-header">
+              <div class="subject-card-icon"><i class="fa-solid fa-microscope"></i></div>
+              <div>
+                <div class="subject-card-title">Olympic Khoa học Koala (KSO)</div>
+                <div class="subject-card-sub">Koala Science Olympiad</div>
+              </div>
+            </div>
+            <div class="subject-card-desc">
+              Áp dụng triết lý cốt lõi của Úc về <em>Học tập dựa trên tìm tòi</em>, kiểm tra khả năng quan sát, thiết kế thí nghiệm và diễn giải dữ liệu để mô phỏng tư duy như một nhà khoa học.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-highlight">
+        <h3><i class="fa-solid fa-bullseye"></i> Điểm nổi bật của KEO</h3>
+        <div class="purpose-item">
+          <div class="purpose-num"><i class="fa-solid fa-flag"></i></div>
+          <div>
+            <div class="purpose-title">Chuẩn chương trình Quốc gia Úc</div>
+            <div class="purpose-desc">Tuân thủ nghiêm ngặt Australian National Curriculum – chuẩn mực giáo dục hàng đầu thế giới.</div>
+          </div>
+        </div>
+        <div class="purpose-item">
+          <div class="purpose-num"><i class="fa-solid fa-lightbulb"></i></div>
+          <div>
+            <div class="purpose-title">Tư duy phản biện &amp; Sáng tạo</div>
+            <div class="purpose-desc">Vượt xa học thuộc lòng – tập trung vào khả năng phân tích, sáng tạo và giải quyết vấn đề.</div>
+          </div>
+        </div>
+        <div class="purpose-item">
+          <div class="purpose-num"><i class="fa-solid fa-globe" aria-hidden="true"></i></div>
+          <div>
+            <div class="purpose-title">Sân chơi quốc tế uy tín</div>
+            <div class="purpose-desc">Giao lưu, kết nối với học sinh nhiều quốc gia thông qua nền tảng thi đấu chuẩn quốc tế.</div>
+          </div>
+        </div>
+        <div class="purpose-item">
+          <div class="purpose-num"><i class="fa-solid fa-trophy"></i></div>
+          <div>
+            <div class="purpose-title">3 môn thi đa dạng</div>
+            <div class="purpose-desc">Toán học (KMO), Tiếng Anh (KEO) và Khoa học (KSO) – bao phủ toàn diện năng lực học sinh.</div>
+          </div>
+        </div>
+        <div class="purpose-item">
+          <div class="purpose-num"><i class="fa-solid fa-scroll"></i></div>
+          <div>
+            <div class="purpose-title">Chứng nhận quốc tế</div>
+            <div class="purpose-desc">Hệ thống giải thưởng và chứng nhận có giá trị, ghi nhận thành tích học sinh trên bản đồ quốc tế.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PURPOSE ===== -->
+<section id="purpose" class="section">
+  <div class="math-deco" aria-hidden="true">
+    <span class="math-sym mf2" style="font-size:6.5rem;color:var(--green);top:5%;right:2%">∫</span>
+    <span class="math-sym mf4" style="font-size:5rem;color:var(--navy);top:22%;left:1%">Δ</span>
+    <span class="math-sym mf6" style="font-size:5.5rem;color:var(--green-dark);bottom:10%;right:3%">α</span>
+    <span class="math-sym mf1" style="font-size:4rem;color:var(--navy);bottom:28%;left:3%">β</span>
+    <span class="math-sym mf8" style="font-size:4.5rem;color:var(--green);top:48%;right:40%">θ</span>
+    <span class="math-sym mf3" style="font-size:3.5rem;color:var(--navy);top:35%;left:20%">÷</span>
+    <div class="math-ball mf1" style="width:120px;height:120px;top:-30px;left:25%;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.8),rgba(45,138,78,.25) 52%,rgba(45,138,78,.05));opacity:.17;"></div>
+    <div class="math-ball mf5" style="width:90px;height:90px;bottom:5%;right:32%;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.7),rgba(26,122,191,.22) 52%,rgba(26,122,191,.05));opacity:.16;"></div>
+    <div class="math-ball mf7" style="width:160px;height:160px;top:30%;left:-40px;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.5),rgba(156,77,204,.15) 52%,rgba(156,77,204,.04));opacity:.14;"></div>
+    <svg class="math-ruler-svg mf6" style="bottom:16%;right:5%;opacity:.065;color:var(--navy);transform:rotate(8deg);" viewBox="0 0 220 44" width="220" height="44" fill="none">
+      <rect x="1" y="5" width="218" height="34" rx="4" stroke="currentColor" stroke-width="1.5" fill="rgba(13,27,75,.07)"></rect>
+      <line x1="20" y1="5" x2="20" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="40" y1="5" x2="40" y2="15" stroke="currentColor" stroke-width="1"></line>
+      <line x1="60" y1="5" x2="60" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="80" y1="5" x2="80" y2="15" stroke="currentColor" stroke-width="1"></line>
+      <line x1="100" y1="5" x2="100" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="120" y1="5" x2="120" y2="15" stroke="currentColor" stroke-width="1"></line>
+      <line x1="140" y1="5" x2="140" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="160" y1="5" x2="160" y2="15" stroke="currentColor" stroke-width="1"></line>
+      <line x1="180" y1="5" x2="180" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="200" y1="5" x2="200" y2="15" stroke="currentColor" stroke-width="1"></line>
+    </svg>
+    <svg class="math-compass-svg mf2" style="top:8%;left:45%;opacity:.065;color:var(--green);" viewBox="0 0 80 110" width="80" height="110" fill="none">
+      <circle cx="40" cy="18" r="5" stroke="currentColor" stroke-width="2"></circle>
+      <line x1="40" y1="18" x2="17" y2="100" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+      <line x1="40" y1="18" x2="63" y2="100" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+      <line x1="28" y1="64" x2="52" y2="64" stroke="currentColor" stroke-width="1.5"></line>
+      <path d="M 21 88 Q 40 102 59 88" stroke="currentColor" stroke-width="1.5" fill="none"></path>
+    </svg>
+  </div>
+  <div class="container">
+    <span class="badge badge-centered">Mục đích</span>
+    <h2 class="section-title">Mục đích của kỳ thi theo từng môn</h2>
+    <div class="divider"></div>
+    <p class="section-sub">KEO hướng tới phát triển toàn diện năng lực học sinh theo từng lĩnh vực chuyên biệt.</p>
+    <div class="purpose-tabs-wrap">
+      <button class="purpose-tab-btn active" onclick="switchPurposeTab(this,&#39;math&#39;)"><i class="fa-solid fa-calculator" aria-hidden="true"></i> Toán học (KMO)</button>
+      <button class="purpose-tab-btn english" onclick="switchPurposeTab(this,&#39;english&#39;)"><i class="fa-solid fa-book"></i> Tiếng Anh (KEO)</button>
+      <button class="purpose-tab-btn science" onclick="switchPurposeTab(this,&#39;science&#39;)"><i class="fa-solid fa-microscope"></i> Khoa học (KSO)</button>
+    </div>
+
+    <!-- KMO -->
+    <div class="purpose-panel active" id="ptab-math">
+      <div class="purpose-grid reveal">
+        <div class="purpose-goal-card">
+          <span class="purpose-goal-number">01</span>
+          <div class="purpose-goal-icon-wrap"><i class="fa-solid fa-calculator" aria-hidden="true"></i></div>
+          <div class="purpose-goal-content">
+            <div class="purpose-goal-title">Năng lực số học (Number Sense)</div>
+            <div class="purpose-goal-desc">Phát triển khả năng nhận biết, hiểu và vận dụng số học trong các tình huống đa dạng của cuộc sống thực tế.</div>
+          </div>
+        </div>
+        <div class="purpose-goal-card">
+          <span class="purpose-goal-number">02</span>
+          <div class="purpose-goal-icon-wrap"><i class="fa-solid fa-brain" aria-hidden="true"></i></div>
+          <div class="purpose-goal-content">
+            <div class="purpose-goal-title">Tư duy logic và lập luận toán học</div>
+            <div class="purpose-goal-desc">Rèn luyện kỹ năng phân tích, suy luận logic và xây dựng lập luận toán học chặt chẽ từ sớm.</div>
+          </div>
+        </div>
+        <div class="purpose-goal-card">
+          <span class="purpose-goal-number">03</span>
+          <div class="purpose-goal-icon-wrap"><i class="fa-solid fa-globe" aria-hidden="true"></i></div>
+          <div class="purpose-goal-content">
+            <div class="purpose-goal-title">Giải quyết vấn đề thực tế</div>
+            <div class="purpose-goal-desc">Vận dụng Toán học vào các bối cảnh thực tế của cuộc sống Úc và toàn cầu, thay vì chỉ giải bài thuần túy.</div>
+          </div>
+        </div>
+        <div class="purpose-goal-card">
+          <span class="purpose-goal-number">04</span>
+          <div class="purpose-goal-icon-wrap"><i class="fa-solid fa-rocket" aria-hidden="true"></i></div>
+          <div class="purpose-goal-content">
+            <div class="purpose-goal-title">Năng lực STEAM tích hợp</div>
+            <div class="purpose-goal-desc">Phát triển năng lực tích hợp liên môn theo định hướng STEAM – kết nối Toán học với Khoa học, Công nghệ và Nghệ thuật.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- KEO English -->
+    <div class="purpose-panel" id="ptab-english">
+      <div class="purpose-grid reveal">
+        <div class="purpose-goal-card english">
+          <span class="purpose-goal-number">01</span>
+          <div class="purpose-goal-icon-wrap"><i class="fa-solid fa-spell-check" aria-hidden="true"></i></div>
+          <div class="purpose-goal-content">
+            <div class="purpose-goal-title">Tăng độ chính xác về chính tả</div>
+            <div class="purpose-goal-desc">Giúp học sinh nắm vững quy tắc chính tả tiếng Anh theo chuẩn Úc, nâng cao độ chính xác trong viết lách hàng ngày.</div>
+          </div>
+        </div>
+        <div class="purpose-goal-card english">
+          <span class="purpose-goal-number">02</span>
+          <div class="purpose-goal-icon-wrap"><i class="fa-solid fa-book-open" aria-hidden="true"></i></div>
+          <div class="purpose-goal-content">
+            <div class="purpose-goal-title">Nâng cao năng lực đọc hiểu</div>
+            <div class="purpose-goal-desc">Phát triển kỹ năng đọc hiểu văn bản phức tạp, phân tích ý nghĩa ngầm định và rút ra thông tin cốt lõi.</div>
+          </div>
+        </div>
+        <div class="purpose-goal-card english">
+          <span class="purpose-goal-number">03</span>
+          <div class="purpose-goal-icon-wrap"><i class="fa-solid fa-pen-nib" aria-hidden="true"></i></div>
+          <div class="purpose-goal-content">
+            <div class="purpose-goal-title">Cải thiện khả năng viết tiếng Anh</div>
+            <div class="purpose-goal-desc">Hướng dẫn học sinh viết tiếng Anh rõ ràng, mạch lạc và đúng ngữ pháp theo tiêu chuẩn học thuật Úc.</div>
+          </div>
+        </div>
+        <div class="purpose-goal-card english">
+          <span class="purpose-goal-number">04</span>
+          <div class="purpose-goal-icon-wrap"><i class="fa-solid fa-list-check" aria-hidden="true"></i></div>
+          <div class="purpose-goal-content">
+            <div class="purpose-goal-title">Viết có cấu trúc</div>
+            <div class="purpose-goal-desc">Rèn cho học sinh cách viết có cấu trúc rõ ràng: mở bài, phát triển ý và kết luận logic, chuẩn bị cho học thuật quốc tế.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- KSO Science -->
+    <div class="purpose-panel" id="ptab-science">
+      <div class="purpose-grid reveal">
+        <div class="purpose-goal-card science">
+          <span class="purpose-goal-number">01</span>
+          <div class="purpose-goal-icon-wrap"><i class="fa-solid fa-atom" aria-hidden="true"></i></div>
+          <div class="purpose-goal-content">
+            <div class="purpose-goal-title">Phát triển tư duy khoa học</div>
+            <div class="purpose-goal-desc">Khuyến khích học sinh tiếp cận thế giới tự nhiên bằng tư duy khoa học – đặt câu hỏi, đưa ra giả thuyết và kiểm nghiệm.</div>
+          </div>
+        </div>
+        <div class="purpose-goal-card science">
+          <span class="purpose-goal-number">02</span>
+          <div class="purpose-goal-icon-wrap"><i class="fa-solid fa-seedling" aria-hidden="true"></i></div>
+          <div class="purpose-goal-content">
+            <div class="purpose-goal-title">Khám phá thế giới tự nhiên</div>
+            <div class="purpose-goal-desc">Tăng khả năng quan sát, tìm hiểu và khám phá các hiện tượng tự nhiên xung quanh cuộc sống học sinh.</div>
+          </div>
+        </div>
+        <div class="purpose-goal-card science">
+          <span class="purpose-goal-number">03</span>
+          <div class="purpose-goal-icon-wrap"><i class="fa-solid fa-chart-column" aria-hidden="true"></i></div>
+          <div class="purpose-goal-content">
+            <div class="purpose-goal-title">Năng lực suy luận từ dữ liệu</div>
+            <div class="purpose-goal-desc">Nhấn mạnh khả năng diễn giải dữ liệu, đọc biểu đồ và rút ra kết luận có căn cứ từ kết quả thí nghiệm.</div>
+          </div>
+        </div>
+        <div class="purpose-goal-card science">
+          <span class="purpose-goal-number">04</span>
+          <div class="purpose-goal-icon-wrap"><i class="fa-solid fa-flask" aria-hidden="true"></i></div>
+          <div class="purpose-goal-content">
+            <div class="purpose-goal-title">Thiết kế thí nghiệm</div>
+            <div class="purpose-goal-desc">Phát triển kỹ năng lên kế hoạch và thiết kế thí nghiệm khoa học, mô phỏng tư duy của một nhà khoa học thực thụ.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TIMELINE ===== -->
+<section id="timeline" class="section">
+  <div class="math-deco" aria-hidden="true">
+    <span class="math-sym mf3" style="font-size:6rem;color:var(--green);top:7%;right:3%">Σ</span>
+    <span class="math-sym mf5" style="font-size:5.5rem;color:var(--navy);bottom:12%;left:2%">π</span>
+    <span class="math-sym mf1" style="font-size:4.5rem;color:var(--green-dark);top:25%;left:3%">×</span>
+    <span class="math-sym mf7" style="font-size:4rem;color:var(--navy);bottom:30%;right:2%">÷</span>
+    <span class="math-sym mf4" style="font-size:5rem;color:var(--green);top:50%;left:42%">∞</span>
+    <div class="math-ball mf2" style="width:100px;height:100px;top:-10px;left:20%;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.8),rgba(13,27,75,.25) 52%,rgba(13,27,75,.06));opacity:.17;"></div>
+    <div class="math-ball mf6" style="width:80px;height:80px;bottom:6%;right:22%;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.7),rgba(45,138,78,.22) 52%,rgba(45,138,78,.05));opacity:.16;"></div>
+    <div class="math-ball mf8" style="width:130px;height:130px;top:35%;right:-20px;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.5),rgba(240,165,0,.18) 52%,rgba(240,165,0,.04));opacity:.14;"></div>
+    <svg class="math-ruler-svg mf4" style="top:10%;left:5%;opacity:.065;color:var(--navy);transform:rotate(15deg);" viewBox="0 0 220 44" width="220" height="44" fill="none">
+      <rect x="1" y="5" width="218" height="34" rx="4" stroke="currentColor" stroke-width="1.5" fill="rgba(13,27,75,.07)"></rect>
+      <line x1="20" y1="5" x2="20" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="40" y1="5" x2="40" y2="15" stroke="currentColor" stroke-width="1"></line>
+      <line x1="60" y1="5" x2="60" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="80" y1="5" x2="80" y2="15" stroke="currentColor" stroke-width="1"></line>
+      <line x1="100" y1="5" x2="100" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="120" y1="5" x2="120" y2="15" stroke="currentColor" stroke-width="1"></line>
+      <line x1="140" y1="5" x2="140" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="160" y1="5" x2="160" y2="15" stroke="currentColor" stroke-width="1"></line>
+      <line x1="180" y1="5" x2="180" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="200" y1="5" x2="200" y2="15" stroke="currentColor" stroke-width="1"></line>
+    </svg>
+    <svg class="math-compass-svg mf3" style="bottom:3%;right:8%;opacity:.065;color:var(--green-dark);transform:rotate(-10deg);" viewBox="0 0 80 110" width="80" height="110" fill="none">
+      <circle cx="40" cy="18" r="5" stroke="currentColor" stroke-width="2"></circle>
+      <line x1="40" y1="18" x2="17" y2="100" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+      <line x1="40" y1="18" x2="63" y2="100" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+      <line x1="28" y1="64" x2="52" y2="64" stroke="currentColor" stroke-width="1.5"></line>
+      <path d="M 21 88 Q 40 102 59 88" stroke="currentColor" stroke-width="1.5" fill="none"></path>
+    </svg>
+  </div>
+  <div class="container">
+    <span class="badge badge-centered">Lịch thi</span>
+    <h2 class="section-title">Mốc thời gian thi</h2>
+    <div class="divider"></div>
+    <p class="section-sub">Chuẩn bị kỹ lưỡng để không bỏ lỡ cơ hội tham gia kỳ thi Olympic quốc tế uy tín theo chuẩn Úc.</p>
+    <div class="timeline-grid reveal">
+      <div class="timeline-card">
+        <div class="timeline-card-header">
+          <div class="timeline-round">Thi online Vòng Quốc Gia</div>
+          <div class="timeline-date">Năm 2026</div>
+        </div>
+        <div class="timeline-card-body">
+          <div class="timeline-detail">
+            <div class="timeline-detail-icon"><i class="fa-solid fa-laptop"></i></div>
+            <div>
+              <div class="timeline-detail-label">Hình thức thi</div>
+              <div class="timeline-detail-value">Thi ONLINE – Trực tuyến</div>
+            </div>
+          </div>
+          <div class="timeline-detail">
+            <div class="timeline-detail-icon"><i class="fa-solid fa-globe" aria-hidden="true"></i></div>
+            <div>
+              <div class="timeline-detail-label">Phạm vi</div>
+              <div class="timeline-detail-value">Học sinh tại Việt Nam đăng ký tham dự</div>
+            </div>
+          </div>
+          <div class="timeline-detail">
+            <div class="timeline-detail-icon"><i class="fa-solid fa-file-lines"></i></div>
+            <div>
+              <div class="timeline-detail-label">Môn thi</div>
+              <div class="timeline-detail-value">Toán (KMO), Tiếng Anh (KEO), Khoa học (KSO)</div>
+            </div>
+          </div>
+          <div class="timeline-detail">
+            <div class="timeline-detail-icon"><i class="fa-solid fa-calendar-days"></i></div>
+            <div>
+              <div class="timeline-detail-label">Thời gian thi</div>
+              <div class="timeline-detail-value">17/05/2026</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-card">
+        <div class="timeline-card-header international">
+          <div class="timeline-round">Vòng Quốc Tế</div>
+          <div class="timeline-date">Thi trực tiếp Vòng Quốc Tế</div>
+        </div>
+        <div class="timeline-card-body">
+          <div class="timeline-detail">
+            <div class="timeline-detail-icon"><i class="fa-solid fa-landmark"></i></div>
+            <div>
+              <div class="timeline-detail-label">Địa điểm</div>
+              <div class="timeline-detail-value">Thi trực tiếp tại Việt Nam (Hà Nội - TP HCM) hoặc Macau</div>
+            </div>
+          </div>
+          <div class="timeline-detail">
+            <div class="timeline-detail-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div>
+              <div class="timeline-detail-label">Hình thức</div>
+              <div class="timeline-detail-value">Thi trực tiếp (Offline) tập trung</div>
+            </div>
+          </div>
+          <div class="timeline-detail">
+            <div class="timeline-detail-icon"><i class="fa-solid fa-earth-asia"></i></div>
+            <div>
+              <div class="timeline-detail-label">Đối tượng</div>
+              <div class="timeline-detail-value">Thí sinh đạt kết quả vòng Quốc Gia</div>
+            </div>
+          </div>
+          <div class="timeline-detail">
+            <div class="timeline-detail-icon"><i class="fa-solid fa-medal"></i></div>
+            <div>
+              <div class="timeline-detail-label">Điều kiện dự thi</div>
+              <div class="timeline-detail-value">Tất cả các thí sinh đạt Huy Chương Đồng trở lên</div>
+            </div>
+          </div>
+          <div class="timeline-detail">
+            <div class="timeline-detail-icon"><i class="fa-solid fa-calendar-days"></i></div>
+            <div>
+              <div class="timeline-detail-label">Thời gian thi</div>
+              <div class="timeline-detail-value">26/07/2026</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="timeline-cta reveal">
+      <a href="https://koala.letrendolympiad.edu.vn/#registration" class="btn btn-primary"><i class="fa-solid fa-trophy"></i> Đăng ký tham dự ngay</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AWARDS ===== -->
+<section id="awards" class="section">
+  <div class="math-deco" aria-hidden="true">
+    <span class="math-sym mf1" style="font-size:6rem;color:var(--green-dark);top:6%;left:2%">Σ</span>
+    <span class="math-sym mf4" style="font-size:5rem;color:var(--navy);top:18%;right:2%">√</span>
+    <span class="math-sym mf6" style="font-size:5.5rem;color:var(--green);bottom:8%;right:3%">π</span>
+    <span class="math-sym mf2" style="font-size:4rem;color:var(--navy);bottom:20%;left:3%">+</span>
+    <span class="math-sym mf8" style="font-size:4.5rem;color:var(--green-dark);top:42%;right:36%">∞</span>
+    <div class="math-ball mf3" style="width:120px;height:120px;top:-25px;right:18%;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.8),rgba(45,138,78,.28) 52%,rgba(45,138,78,.07));opacity:.18;"></div>
+    <div class="math-ball mf7" style="width:90px;height:90px;bottom:4%;left:28%;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.7),rgba(240,165,0,.25) 52%,rgba(240,165,0,.06));opacity:.16;"></div>
+    <div class="math-ball mf1" style="width:150px;height:150px;bottom:-50px;left:-30px;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.5),rgba(13,27,75,.15) 52%,rgba(13,27,75,.04));opacity:.14;"></div>
+    <svg class="math-ruler-svg mf5" style="bottom:18%;right:2%;opacity:.065;color:var(--green-dark);transform:rotate(-8deg);" viewBox="0 0 220 44" width="220" height="44" fill="none">
+      <rect x="1" y="5" width="218" height="34" rx="4" stroke="currentColor" stroke-width="1.5" fill="rgba(13,27,75,.07)"></rect>
+      <line x1="20" y1="5" x2="20" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="40" y1="5" x2="40" y2="15" stroke="currentColor" stroke-width="1"></line>
+      <line x1="60" y1="5" x2="60" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="80" y1="5" x2="80" y2="15" stroke="currentColor" stroke-width="1"></line>
+      <line x1="100" y1="5" x2="100" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="120" y1="5" x2="120" y2="15" stroke="currentColor" stroke-width="1"></line>
+      <line x1="140" y1="5" x2="140" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="160" y1="5" x2="160" y2="15" stroke="currentColor" stroke-width="1"></line>
+      <line x1="180" y1="5" x2="180" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="200" y1="5" x2="200" y2="15" stroke="currentColor" stroke-width="1"></line>
+    </svg>
+    <svg class="math-compass-svg mf4" style="top:5%;right:42%;opacity:.065;color:var(--navy);" viewBox="0 0 80 110" width="80" height="110" fill="none">
+      <circle cx="40" cy="18" r="5" stroke="currentColor" stroke-width="2"></circle>
+      <line x1="40" y1="18" x2="17" y2="100" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+      <line x1="40" y1="18" x2="63" y2="100" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+      <line x1="28" y1="64" x2="52" y2="64" stroke="currentColor" stroke-width="1.5"></line>
+      <path d="M 21 88 Q 40 102 59 88" stroke="currentColor" stroke-width="1.5" fill="none"></path>
+    </svg>
+  </div>
+  <div class="container">
+    <span class="badge badge-centered">Giải thưởng</span>
+    <h2 class="section-title">Cơ cấu giải thưởng</h2>
+    <div class="divider"></div>
+    <p class="section-sub">Hệ thống giải thưởng hấp dẫn và chứng nhận quốc tế uy tín dành cho các thí sinh xuất sắc.</p>
+    <div class="awards-tabs">
+      <button class="tab-btn active" onclick="switchTab(this, &#39;national&#39;)"><i class="fa-solid fa-flag"></i> Vòng Quốc Gia</button>
+      <button class="tab-btn" onclick="switchTab(this, &#39;international&#39;)"><i class="fa-solid fa-earth-asia"></i> Vòng Quốc Tế</button>
+      <button class="tab-btn" onclick="switchTab(this, &#39;special&#39;)"><i class="fa-solid fa-star"></i> Giải Đặc Biệt</button>
+    </div>
+
+    <!-- National awards -->
+    <div class="awards-panel active" id="tab-national">
+      <div class="awards-grid reveal">
+        <div class="award-card special">
+          <div class="award-medal"><i class="fa-solid fa-crown"></i></div>
+          <div class="award-title">Nhà vô địch Koala vàng</div>
+          <div class="award-condition">Xếp hạng #1 trong vòng chung kết</div>
+          <ul class="award-prizes">
+            <li>Tiền mặt</li>
+            <li>Huy chương</li>
+            <li>Giấy chứng nhận</li>
+          </ul>
+        </div>
+        <div class="award-card silver">
+          <div class="award-medal" style="color:#C0C0C0"><i class="fa-solid fa-medal"></i></div>
+          <div class="award-title">Người đoạt giải Nhì</div>
+          <div class="award-condition">Xếp hạng #2 trong vòng chung kết</div>
+          <ul class="award-prizes">
+            <li>Huy chương</li>
+            <li>Giấy chứng nhận</li>
+          </ul>
+        </div>
+        <div class="award-card bronze">
+          <div class="award-medal" style="color:#CD7F32"><i class="fa-solid fa-medal"></i></div>
+          <div class="award-title">Người chiến thắng giải Ba</div>
+          <div class="award-condition">Xếp hạng #3 trong vòng chung kết</div>
+          <ul class="award-prizes">
+            <li>Huy chương</li>
+            <li>Giấy chứng nhận</li>
+          </ul>
+        </div>
+        <div class="award-card special">
+          <div class="award-medal"><i class="fa-solid fa-star"></i></div>
+          <div class="award-title">Điểm thưởng tuyệt đối</div>
+          <div class="award-condition">Điểm số 100/100</div>
+          <ul class="award-prizes">
+            <li>Huy chương</li>
+            <li>Giấy chứng nhận</li>
+          </ul>
+        </div>
+        <div class="award-card gold">
+          <div class="award-medal" style="color:#FFD700"><i class="fa-solid fa-medal"></i></div>
+          <div class="award-title">Giải Vàng</div>
+          <div class="award-condition">Điểm số ≥ 90</div>
+          <ul class="award-prizes">
+            <li>Huy chương</li>
+            <li>Giấy chứng nhận</li>
+          </ul>
+        </div>
+        <div class="award-card silver">
+          <div class="award-medal" style="color:#C0C0C0"><i class="fa-solid fa-medal"></i></div>
+          <div class="award-title">Giải thưởng Bạc</div>
+          <div class="award-condition">Điểm ≥ 80</div>
+          <ul class="award-prizes">
+            <li>Huy chương</li>
+            <li>Giấy chứng nhận</li>
+          </ul>
+        </div>
+        <div class="award-card bronze">
+          <div class="award-medal" style="color:#CD7F32"><i class="fa-solid fa-medal"></i></div>
+          <div class="award-title">Giải thưởng Đồng</div>
+          <div class="award-condition">Điểm số ≥ 70</div>
+          <ul class="award-prizes">
+            <li>Huy chương</li>
+            <li>Giấy chứng nhận</li>
+          </ul>
+        </div>
+        <div class="award-card merit">
+          <div class="award-medal"><i class="fa-solid fa-award"></i></div>
+          <div class="award-title">Khuyến khích</div>
+          <div class="award-condition">Điểm số ≥ 50</div>
+          <ul class="award-prizes">
+            <li>Giấy chứng nhận</li>
+          </ul>
+        </div>
+        <div class="award-card">
+          <div class="award-medal" style="color:var(--text-muted)"><i class="fa-solid fa-certificate"></i></div>
+          <div class="award-title">Tham gia</div>
+          <div class="award-condition">Tất cả thí sinh có điểm số &lt; 50</div>
+          <ul class="award-prizes">
+            <li>Giấy chứng nhận tham gia</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- International awards -->
+    <div class="awards-panel" id="tab-international">
+      <div class="awards-grid reveal">
+        <div class="info-pending">
+          <div class="info-pending-icon"><i class="fa-solid fa-earth-asia"></i></div>
+          <div class="info-pending-title">Cơ cấu giải thưởng vòng Quốc Tế</div>
+          <div class="info-pending-text">
+            Thông tin chi tiết về giải thưởng vòng quốc tế đang được Ban Tổ chức hoàn thiện.<br>
+            <strong style="color:var(--green);display:block;margin-top:8px;">Sẽ được cập nhật sớm nhất!</strong>
+          </div>
+        </div>
+        <div class="award-card special">
+          <div class="award-medal"><i class="fa-solid fa-crown"></i></div>
+          <div class="award-title">Quán quân Quốc Tế</div>
+          <div class="award-condition">Điểm số 100/100</div>
+          <ul class="award-prizes">
+            <li>Cúp vô địch KEO quốc tế</li>
+            <li>Giấy chứng nhận quốc tế</li>
+            <li>Phần thưởng đặc biệt từ BTC</li>
+          </ul>
+        </div>
+        <div class="award-card gold">
+          <div class="award-medal" style="color:#FFD700"><i class="fa-solid fa-medal"></i></div>
+          <div class="award-title">Giải Vàng Quốc Tế</div>
+          <div class="award-condition">Điểm số ≥ 90</div>
+          <ul class="award-prizes">
+            <li>Huy chương Vàng KEO quốc tế</li>
+            <li>Giấy chứng nhận quốc tế</li>
+            <li>Áo in logo KOALA KEO</li>
+          </ul>
+        </div>
+        <div class="award-card silver">
+          <div class="award-medal" style="color:#C0C0C0"><i class="fa-solid fa-medal"></i></div>
+          <div class="award-title">Giải Bạc Quốc Tế</div>
+          <div class="award-condition">Điểm số ≥ 80</div>
+          <ul class="award-prizes">
+            <li>Huy chương Bạc KEO quốc tế</li>
+            <li>Giấy chứng nhận quốc tế</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Special awards -->
+    <div class="awards-panel" id="tab-special">
+      <div class="awards-grid reveal">
+        <div class="info-pending" style="grid-column:1/-1;">
+          <div class="info-pending-icon"><i class="fa-solid fa-star"></i></div>
+          <div class="info-pending-title">Giải Đặc Biệt KEO KOALA</div>
+          <div class="info-pending-text">
+            Thông tin về các giải thưởng đặc biệt dành cho thí sinh xuất sắc nhất đang được Ban Tổ chức KOALA và đơn vị đồng hành tại Việt Nam chuẩn bị.<br><br>
+            Các hạng mục dự kiến bao gồm: giải Best in Country, giải xuất sắc theo từng môn thi, giải tập thể trường học, và nhiều hạng mục đặc biệt khác.<br>
+            <strong style="color:var(--green);display:block;margin-top:12px;"><i class="fa-solid fa-envelope-open-text"></i> Đăng ký để nhận thông báo sớm nhất khi có cập nhật!</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXAM INFO ===== -->
+<section id="curriculum" class="section">
+  <div class="math-deco" aria-hidden="true">
+    <span class="math-sym mf2" style="font-size:6.5rem;color:var(--navy);top:5%;right:1%">∂</span>
+    <span class="math-sym mf4" style="font-size:5rem;color:var(--green);top:20%;left:2%">∫</span>
+    <span class="math-sym mf6" style="font-size:5.5rem;color:var(--navy);bottom:10%;left:3%">Σ</span>
+    <span class="math-sym mf1" style="font-size:4rem;color:var(--green-dark);bottom:25%;right:2%">α</span>
+    <span class="math-sym mf8" style="font-size:4.5rem;color:var(--navy);top:44%;right:38%">π</span>
+    <div class="math-ball mf5" style="width:110px;height:110px;top:-15px;left:32%;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.8),rgba(13,27,75,.22) 52%,rgba(13,27,75,.05));opacity:.16;"></div>
+    <div class="math-ball mf3" style="width:85px;height:85px;bottom:8%;right:18%;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.7),rgba(45,138,78,.22) 52%,rgba(45,138,78,.05));opacity:.15;"></div>
+    <div class="math-ball mf7" style="width:145px;height:145px;top:28%;right:-35px;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.5),rgba(240,165,0,.15) 52%,rgba(240,165,0,.04));opacity:.13;"></div>
+    <svg class="math-ruler-svg mf1" style="top:12%;left:3%;opacity:.065;color:var(--navy);transform:rotate(6deg);" viewBox="0 0 220 44" width="220" height="44" fill="none">
+      <rect x="1" y="5" width="218" height="34" rx="4" stroke="currentColor" stroke-width="1.5" fill="rgba(13,27,75,.07)"></rect>
+      <line x1="20" y1="5" x2="20" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="40" y1="5" x2="40" y2="15" stroke="currentColor" stroke-width="1"></line>
+      <line x1="60" y1="5" x2="60" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="80" y1="5" x2="80" y2="15" stroke="currentColor" stroke-width="1"></line>
+      <line x1="100" y1="5" x2="100" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="120" y1="5" x2="120" y2="15" stroke="currentColor" stroke-width="1"></line>
+      <line x1="140" y1="5" x2="140" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="160" y1="5" x2="160" y2="15" stroke="currentColor" stroke-width="1"></line>
+      <line x1="180" y1="5" x2="180" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="200" y1="5" x2="200" y2="15" stroke="currentColor" stroke-width="1"></line>
+    </svg>
+    <svg class="math-compass-svg mf6" style="bottom:5%;left:44%;opacity:.065;color:var(--green);transform:rotate(5deg);" viewBox="0 0 80 110" width="80" height="110" fill="none">
+      <circle cx="40" cy="18" r="5" stroke="currentColor" stroke-width="2"></circle>
+      <line x1="40" y1="18" x2="17" y2="100" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+      <line x1="40" y1="18" x2="63" y2="100" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+      <line x1="28" y1="64" x2="52" y2="64" stroke="currentColor" stroke-width="1.5"></line>
+      <path d="M 21 88 Q 40 102 59 88" stroke="currentColor" stroke-width="1.5" fill="none"></path>
+    </svg>
+  </div>
+  <div class="container">
+    <span class="badge badge-centered">Nội dung thi</span>
+    <h2 class="section-title">Thông tin đề thi</h2>
+    <div class="divider"></div>
+    <p class="section-sub">Thông tin chi tiết về cấu trúc đề thi, thời gian làm bài và cấp độ thi cho từng môn.</p>
+    <div class="curriculum-grid reveal">
+      <div>
+        <div class="info-card">
+          <h3><i class="fa-solid fa-circle-info"></i> Thông tin chung</h3>
+          <div class="info-row">
+            <span class="info-row-label">Đối tượng tham dự</span>
+            <span class="info-row-value">Học sinh lớp 1 – Lớp 12</span>
+          </div>
+          <div class="info-row">
+            <span class="info-row-label">Ngôn ngữ đề thi</span>
+            <span class="info-row-value">Song ngữ</span>
+          </div>
+          <div class="info-row">
+            <span class="info-row-label">Số lượng câu hỏi</span>
+            <span class="info-row-value">25 - 40 câu</span>
+          </div>
+          <div class="info-row">
+            <span class="info-row-label">Hình thức</span>
+            <span class="info-row-value">Thi Online - Trực tuyến</span>
+          </div>
+          <div style="margin-top:16px;padding:14px;background:rgba(45,138,78,.08);border-radius:10px;border-left:3px solid var(--green);">
+            <div style="font-size:.8rem;color:var(--green);font-weight:700;margin-bottom:4px;"><i class="fa-solid fa-thumbtack"></i> Lưu ý</div>
+            <div style="font-size:.82rem;color:var(--text-muted);">Thông tin chi tiết về số câu hỏi và thời gian làm bài sẽ được cập nhật theo từng cấp độ và môn thi. Vui lòng theo dõi thông báo của Ban Tổ chức.</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="info-card">
+          <h3><i class="fa-solid fa-book"></i> Cấu trúc đề thi theo môn</h3>
+          <div class="subject-info-tabs">
+            <button class="subject-info-btn active" onclick="switchSubjectInfo(this,&#39;si-math&#39;)"><i class="fa-solid fa-calculator" aria-hidden="true"></i> Toán</button>
+            <button class="subject-info-btn" onclick="switchSubjectInfo(this,&#39;si-english&#39;)"><i class="fa-solid fa-book"></i> Tiếng Anh</button>
+            <button class="subject-info-btn" onclick="switchSubjectInfo(this,&#39;si-science&#39;)"><i class="fa-solid fa-microscope"></i> Khoa học</button>
+          </div>
+          <div class="subject-info-panel active" id="si-math">
+            <table class="level-table">
+              <thead>
+                <tr>
+                  <th>Cấp độ</th>
+                  <th>Danh mục</th>
+                  <th>Khối lớp</th>
+                  <th>Nội dung trọng tâm</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="level-badge kmo">KMO A</span></td>
+                  <td style="font-weight:600;white-space:nowrap;">Mầm non &amp; Tiểu học (cấp dưới)</td>
+                  <td style="white-space:nowrap;">Mầm non, Lớp 1–2</td>
+                  <td><strong style="font-size:.82rem;">Nhận thức số &amp; Phép tính</strong><div class="topic-tags"><span class="topic-tag kmo">Đếm số</span><span class="topic-tag kmo">Hình dạng</span><span class="topic-tag kmo">Cộng/Trừ</span><span class="topic-tag kmo">So sánh</span></div></td>
+                </tr>
+                <tr>
+                  <td><span class="level-badge kmo">KMO B</span></td>
+                  <td style="font-weight:600;white-space:nowrap;">Tiểu học (cấp giữa)</td>
+                  <td style="white-space:nowrap;">Lớp 3–4</td>
+                  <td><strong style="font-size:.82rem;">Phép tính &amp; Tư duy logic</strong><div class="topic-tags"><span class="topic-tag kmo">Phân số</span><span class="topic-tag kmo">Bội số</span><span class="topic-tag kmo">Đo lường</span><span class="topic-tag kmo">Hình học</span></div></td>
+                </tr>
+                <tr>
+                  <td><span class="level-badge kmo">KMO C</span></td>
+                  <td style="font-weight:600;white-space:nowrap;">Tiểu học (cấp trên)</td>
+                  <td style="white-space:nowrap;">Lớp 5–6</td>
+                  <td><strong style="font-size:.82rem;">Ứng dụng tích hợp</strong><div class="topic-tags"><span class="topic-tag kmo">Tỉ lệ</span><span class="topic-tag kmo">Phân tích dữ liệu</span><span class="topic-tag kmo">Đại số</span><span class="topic-tag kmo">Phần trăm</span></div></td>
+                </tr>
+                <tr>
+                  <td><span class="level-badge kmo">KMO D</span></td>
+                  <td style="font-weight:600;white-space:nowrap;">Trung học cơ sở</td>
+                  <td style="white-space:nowrap;">Lớp 7–8</td>
+                  <td><strong style="font-size:.82rem;">Hình học &amp; Đại số</strong><div class="topic-tags"><span class="topic-tag kmo">Phương trình</span><span class="topic-tag kmo">Hình học</span><span class="topic-tag kmo">Thống kê</span><span class="topic-tag kmo">Tọa độ</span></div></td>
+                </tr>
+                <tr>
+                  <td><span class="level-badge kmo">KMO E</span></td>
+                  <td style="font-weight:600;white-space:nowrap;">Trung học phổ thông</td>
+                  <td style="white-space:nowrap;">Lớp 9–10</td>
+                  <td><strong style="font-size:.82rem;">Đại số nâng cao &amp; Lượng giác</strong><div class="topic-tags"><span class="topic-tag kmo">Bậc hai</span><span class="topic-tag kmo">Lượng giác</span><span class="topic-tag kmo">Xác suất</span><span class="topic-tag kmo">Hàm số</span></div></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="subject-info-panel" id="si-english">
+            <table class="level-table">
+              <thead>
+                <tr>
+                  <th>Cấp độ</th>
+                  <th>Khối lớp</th>
+                  <th>Trình độ CEFR</th>
+                  <th>Thời gian</th>
+                  <th>Số câu</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="level-badge keo">KEO A</span><br><small style="color:var(--text-muted);font-size:.75rem;">Trình độ sơ cấp</small></td>
+                  <td>Lớp 1–2</td>
+                  <td><span class="cefr-badge">Pre-A1–A1</span></td>
+                  <td>45 phút</td>
+                  <td>25 câu</td>
+                </tr>
+                <tr>
+                  <td><span class="level-badge keo">KEO B</span></td>
+                  <td>Lớp 3–4</td>
+                  <td><span class="cefr-badge">A2</span></td>
+                  <td>45 phút</td>
+                  <td>25 câu</td>
+                </tr>
+                <tr>
+                  <td><span class="level-badge keo">KEO C</span></td>
+                  <td>Lớp 5–6</td>
+                  <td><span class="cefr-badge">B1</span></td>
+                  <td>45 phút</td>
+                  <td>25 câu</td>
+                </tr>
+                <tr>
+                  <td><span class="level-badge keo">KEO D</span></td>
+                  <td>Lớp 7–8</td>
+                  <td><span class="cefr-badge">B2</span></td>
+                  <td>60 phút</td>
+                  <td>25 câu</td>
+                </tr>
+                <tr>
+                  <td><span class="level-badge keo">KEO E</span></td>
+                  <td>Lớp 9–10</td>
+                  <td><span class="cefr-badge">C1–C2</span></td>
+                  <td>60 phút</td>
+                  <td>25 câu</td>
+                </tr>
+                <tr>
+                  <td><span class="level-badge keo">KEO F</span></td>
+                  <td>Lớp 11–12</td>
+                  <td><span class="cefr-badge">C1–C2</span></td>
+                  <td>60 phút</td>
+                  <td>25 câu</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="subject-info-panel" id="si-science">
+            <table class="level-table">
+              <thead>
+                <tr>
+                  <th>Cấp độ</th>
+                  <th>Khối lớp</th>
+                  <th>Nội dung trọng tâm</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="level-badge kso">KEO A</span></td>
+                  <td style="white-space:nowrap;">Lớp 1–2</td>
+                  <td style="font-size:.8rem;line-height:1.5;">Quan sát thực tế hằng ngày và kiến thức cơ bản.</td>
+                </tr>
+                <tr>
+                  <td><span class="level-badge kso">KEO B</span></td>
+                  <td style="white-space:nowrap;">Lớp 3–4</td>
+                  <td style="font-size:.8rem;line-height:1.5;">Hiện tượng tự nhiên và phân loại đơn giản.</td>
+                </tr>
+                <tr>
+                  <td><span class="level-badge kso">KEO C</span></td>
+                  <td style="white-space:nowrap;">Lớp 5–6</td>
+                  <td style="font-size:.8rem;line-height:1.5;">Quy trình thí nghiệm và kiểm chứng khách quan.</td>
+                </tr>
+                <tr>
+                  <td><span class="level-badge kso">KEO D</span></td>
+                  <td style="white-space:nowrap;">Lớp 7–8</td>
+                  <td style="font-size:.8rem;line-height:1.5;">Lập luận logic và kiểm soát biến số.</td>
+                </tr>
+                <tr>
+                  <td><span class="level-badge kso">KEO E</span></td>
+                  <td style="white-space:nowrap;">Lớp 9–10</td>
+                  <td style="font-size:.8rem;line-height:1.5;">Phân tích dữ liệu và nguyên lý khoa học.</td>
+                </tr>
+                <tr>
+                  <td><span class="level-badge kso">KEO F</span></td>
+                  <td style="white-space:nowrap;">Lớp 11–12</td>
+                  <td style="font-size:.8rem;line-height:1.5;">Phân tích tổng hợp và tư duy phản biện.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="info-card" style="margin-top:16px;">
+          <h3><i class="fa-solid fa-graduation-cap"></i> Cấp độ thi</h3>
+          <div class="topic-list">
+            <span class="topic-tag"><i class="fa-solid fa-calculator" aria-hidden="true"></i> Toán: Lớp 1–12</span>
+            <span class="topic-tag"><i class="fa-solid fa-book"></i> Tiếng Anh: Lớp 1–12</span>
+            <span class="topic-tag"><i class="fa-solid fa-microscope"></i> Khoa học: Lớp 1–12</span>
+          </div>
+          <div style="margin-top:16px;font-size:.82rem;color:var(--text-muted);">
+            ℹ️ Mỗi môn thi được phân chia thành các cấp độ tương ứng với từng khối lớp. Thông tin chi tiết về phân cấp từng môn sẽ được cập nhật sớm.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SAMPLE EXAMS ===== -->
+<section id="samples" class="section">
+  <div class="math-deco" aria-hidden="true">
+    <span class="math-sym mf3" style="font-size:6rem;color:var(--green-dark);top:8%;left:1%">∫</span>
+    <span class="math-sym mf5" style="font-size:5rem;color:var(--navy);top:15%;right:2%">Δ</span>
+    <span class="math-sym mf7" style="font-size:5.5rem;color:var(--green);bottom:8%;right:2%">√</span>
+    <span class="math-sym mf2" style="font-size:4rem;color:var(--navy);bottom:22%;left:2%">×</span>
+    <span class="math-sym mf6" style="font-size:4.5rem;color:var(--green-dark);top:45%;left:44%">β</span>
+    <div class="math-ball mf4" style="width:115px;height:115px;top:-20px;right:35%;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.8),rgba(45,138,78,.28) 52%,rgba(45,138,78,.07));opacity:.17;"></div>
+    <div class="math-ball mf8" style="width:80px;height:80px;bottom:5%;left:22%;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.7),rgba(26,122,191,.22) 52%,rgba(26,122,191,.05));opacity:.15;"></div>
+    <div class="math-ball mf2" style="width:135px;height:135px;bottom:-45px;right:5%;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.5),rgba(156,77,204,.15) 52%,rgba(156,77,204,.04));opacity:.14;"></div>
+    <svg class="math-ruler-svg mf7" style="bottom:14%;left:2%;opacity:.065;color:var(--navy);transform:rotate(-5deg);" viewBox="0 0 220 44" width="220" height="44" fill="none">
+      <rect x="1" y="5" width="218" height="34" rx="4" stroke="currentColor" stroke-width="1.5" fill="rgba(13,27,75,.07)"></rect>
+      <line x1="20" y1="5" x2="20" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="40" y1="5" x2="40" y2="15" stroke="currentColor" stroke-width="1"></line>
+      <line x1="60" y1="5" x2="60" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="80" y1="5" x2="80" y2="15" stroke="currentColor" stroke-width="1"></line>
+      <line x1="100" y1="5" x2="100" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="120" y1="5" x2="120" y2="15" stroke="currentColor" stroke-width="1"></line>
+      <line x1="140" y1="5" x2="140" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="160" y1="5" x2="160" y2="15" stroke="currentColor" stroke-width="1"></line>
+      <line x1="180" y1="5" x2="180" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="200" y1="5" x2="200" y2="15" stroke="currentColor" stroke-width="1"></line>
+    </svg>
+    <svg class="math-compass-svg mf1" style="top:6%;right:10%;opacity:.065;color:var(--green-dark);transform:rotate(12deg);" viewBox="0 0 80 110" width="80" height="110" fill="none">
+      <circle cx="40" cy="18" r="5" stroke="currentColor" stroke-width="2"></circle>
+      <line x1="40" y1="18" x2="17" y2="100" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+      <line x1="40" y1="18" x2="63" y2="100" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+      <line x1="28" y1="64" x2="52" y2="64" stroke="currentColor" stroke-width="1.5"></line>
+      <path d="M 21 88 Q 40 102 59 88" stroke="currentColor" stroke-width="1.5" fill="none"></path>
+    </svg>
+  </div>
+  <div class="container">
+    <span class="badge badge-centered">Đề thi mẫu</span>
+    <h2 class="section-title">Đề thi mẫu KEO KOALA</h2>
+    <div class="divider"></div>
+    <p class="section-sub">Tham khảo đề thi mẫu để chuẩn bị tốt nhất cho kỳ thi Olympic KOALA Australia.</p>
+    <div class="samples-grid reveal">
+      <div class="sample-card">
+        <div class="sample-card-header math">
+          <div class="sample-card-icon"><i class="fa-solid fa-calculator" aria-hidden="true"></i></div>
+          <div class="sample-card-title">Đề thi mẫu môn Toán</div>
+          <div class="sample-card-sub">Koala Mathematics Olympiad – KMO</div>
+        </div>
+        <div class="sample-card-body">
+          <div class="sample-card-desc">Bộ câu hỏi mẫu theo triết lý "Toán học như cuộc sống", bao gồm các bài toán ngữ cảnh thực tế theo chuẩn chương trình Úc.</div>
+          <a href="https://drive.google.com/drive/u/0/folders/1J3PiMqEGMMTcNTdwF9u8Tc68hy_m_gbc" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="fa-solid fa-eye"></i> Xem ngay</a>
+        </div>
+      </div>
+      <div class="sample-card">
+        <div class="sample-card-header english">
+          <div class="sample-card-icon"><i class="fa-solid fa-book"></i></div>
+          <div class="sample-card-title">Đề thi mẫu môn Tiếng Anh</div>
+          <div class="sample-card-sub">Koala English Olympiad – KEO</div>
+        </div>
+        <div class="sample-card-body">
+          <div class="sample-card-desc">Bộ bài thi mẫu tích hợp: chính tả, đọc hiểu và viết theo tiêu chuẩn khả năng đọc viết của Úc (Australian Literacy Standards).</div>
+          <a href="https://drive.google.com/drive/u/0/folders/1J3PiMqEGMMTcNTdwF9u8Tc68hy_m_gbc" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-outline-blue"><i class="fa-solid fa-eye"></i> Xem ngay</a>
+        </div>
+      </div>
+      <div class="sample-card">
+        <div class="sample-card-header science">
+          <div class="sample-card-icon"><i class="fa-solid fa-microscope"></i></div>
+          <div class="sample-card-title">Đề thi mẫu môn Khoa học</div>
+          <div class="sample-card-sub">Koala Science Olympiad – KSO</div>
+        </div>
+        <div class="sample-card-body">
+          <div class="sample-card-desc">Bộ câu hỏi mẫu theo phương pháp Inquiry-Based Learning: quan sát hiện tượng, thiết kế thí nghiệm và diễn giải kết quả.</div>
+          <a href="https://drive.google.com/drive/u/0/folders/1J3PiMqEGMMTcNTdwF9u8Tc68hy_m_gbc" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-outline-purple"><i class="fa-solid fa-eye"></i> Xem ngay</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REGISTRATION ===== -->
+<section id="registration" class="section">
+  <div class="math-deco" aria-hidden="true">
+    <span class="math-sym mf1" style="font-size:7rem;color:var(--green-dark);top:5%;right:2%">π</span>
+    <span class="math-sym mf3" style="font-size:5.5rem;color:var(--navy);top:22%;left:1%">Σ</span>
+    <span class="math-sym mf5" style="font-size:5rem;color:var(--green);bottom:10%;left:3%">∞</span>
+    <span class="math-sym mf7" style="font-size:4rem;color:var(--navy);bottom:28%;right:3%">θ</span>
+    <span class="math-sym mf2" style="font-size:4.5rem;color:var(--green-dark);top:46%;left:43%">∂</span>
+    <div class="math-ball mf6" style="width:105px;height:105px;top:-15px;left:22%;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.9),rgba(45,138,78,.3) 52%,rgba(45,138,78,.07));opacity:.18;"></div>
+    <div class="math-ball mf4" style="width:88px;height:88px;bottom:6%;right:25%;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.8),rgba(13,27,75,.22) 52%,rgba(13,27,75,.05));opacity:.16;"></div>
+    <div class="math-ball mf8" style="width:155px;height:155px;bottom:-55px;right:-35px;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.6),rgba(45,138,78,.18) 52%,rgba(45,138,78,.04));opacity:.15;"></div>
+    <svg class="math-ruler-svg mf2" style="top:15%;right:5%;opacity:.065;color:var(--navy);transform:rotate(10deg);" viewBox="0 0 220 44" width="220" height="44" fill="none">
+      <rect x="1" y="5" width="218" height="34" rx="4" stroke="currentColor" stroke-width="1.5" fill="rgba(13,27,75,.07)"></rect>
+      <line x1="20" y1="5" x2="20" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="40" y1="5" x2="40" y2="15" stroke="currentColor" stroke-width="1"></line>
+      <line x1="60" y1="5" x2="60" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="80" y1="5" x2="80" y2="15" stroke="currentColor" stroke-width="1"></line>
+      <line x1="100" y1="5" x2="100" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="120" y1="5" x2="120" y2="15" stroke="currentColor" stroke-width="1"></line>
+      <line x1="140" y1="5" x2="140" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="160" y1="5" x2="160" y2="15" stroke="currentColor" stroke-width="1"></line>
+      <line x1="180" y1="5" x2="180" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="200" y1="5" x2="200" y2="15" stroke="currentColor" stroke-width="1"></line>
+    </svg>
+    <svg class="math-compass-svg mf5" style="bottom:4%;left:5%;opacity:.065;color:var(--green);transform:rotate(-8deg);" viewBox="0 0 80 110" width="80" height="110" fill="none">
+      <circle cx="40" cy="18" r="5" stroke="currentColor" stroke-width="2"></circle>
+      <line x1="40" y1="18" x2="17" y2="100" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+      <line x1="40" y1="18" x2="63" y2="100" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+      <line x1="28" y1="64" x2="52" y2="64" stroke="currentColor" stroke-width="1.5"></line>
+      <path d="M 21 88 Q 40 102 59 88" stroke="currentColor" stroke-width="1.5" fill="none"></path>
+    </svg>
+  </div>
+  <div class="container">
+    <span class="badge badge-centered">Đăng ký</span>
+    <h2 class="section-title">Thông tin đăng ký</h2>
+    <div class="divider"></div>
+    <p class="section-sub">Đăng ký tham dự kỳ thi KEO KOALA 2026 ngay hôm nay để không bỏ lỡ cơ hội.</p>
+    <div class="reg-grid reveal">
+      <div>
+        <div class="info-card">
+          <h3><i class="fa-solid fa-coins"></i> Lệ phí thi</h3>
+          <div style="font-size:.9rem;font-weight:700;color:var(--green-dark);margin-bottom:8px;">🇻🇳 Vòng Thi Quốc Gia</div>
+          <div class="info-row">
+            <span class="info-row-label">1 môn thi</span>
+            <span class="info-row-value">450.000 VNĐ/thí sinh</span>
+          </div>
+          <div class="info-row">
+            <span class="info-row-label">2 môn thi</span>
+            <span class="info-row-value">750.000 VNĐ/thí sinh</span>
+          </div>
+          <div class="info-row">
+            <span class="info-row-label">3 môn thi</span>
+            <span class="info-row-value">1.050.000 VNĐ/thí sinh</span>
+          </div>
+          <div style="font-size:.9rem;font-weight:700;color:var(--green-dark);margin-top:20px;margin-bottom:8px;">🌍 Vòng Thi Quốc Tế <span style="font-weight:400;color:var(--text-muted);">(Thi tại Việt Nam)</span></div>
+          <div class="info-row">
+            <span class="info-row-label">1 môn thi</span>
+            <span class="info-row-value">2.600.000 VNĐ/thí sinh</span>
+          </div>
+          <div class="info-row">
+            <span class="info-row-label">2 môn thi</span>
+            <span class="info-row-value">4.800.000 VNĐ/thí sinh</span>
+          </div>
+          <div class="info-row" style="border-bottom:none;">
+            <span class="info-row-label">3 môn thi</span>
+            <span class="info-row-value">6.250.000 VNĐ/thí sinh</span>
+          </div>
+          <div class="reg-buttons">
+            <a href="https://tinyurl.com/CaNhanDKKEO2026" target="_blank" rel="noopener noreferrer" class="btn btn-reg-individual"><i class="fa-solid fa-user"></i> Đăng ký cá nhân</a>
+            <a href="https://docs.google.com/spreadsheets/d/17iSV1A9TQYX6UWV1cG9SLQ-4LFyVJwJ5/edit?gid=337372107#gid=337372107" target="_blank" rel="noopener noreferrer" class="btn btn-reg-school"><i class="fa-solid fa-school"></i> Đăng ký theo trường</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="bank-card">
+          <h3><i class="fa-solid fa-building-columns"></i> Cách thức đóng lệ phí</h3>
+          <div style="margin-bottom:16px;">
+            <p style="font-weight:700;color:var(--navy);margin-bottom:8px;"><i class="fa-solid fa-location-dot"></i> Cách 1. Nộp trực tiếp tại điểm thu phí: Công ty TNHH LETREND OLYMPIAD</p>
+            <p style="margin-left:20px;">(Địa chỉ Công ty: B1-BT5 Khu đô mới Hạ Đình, phường Thanh Liệt, TP Hà Nội)</p>
+          </div>
+          <div style="margin-bottom:20px;">
+            <p style="font-weight:700;color:var(--navy);margin-bottom:12px;"><i class="fa-solid fa-building-columns"></i> Cách 2. Nộp học phí thông qua hình thức chuyển khoản</p>
+            <div style="background:#f0f7ff;border-radius:12px;padding:20px;margin-bottom:14px;border:1px solid rgba(13,27,75,.12);">
+              <p style="font-weight:800;color:var(--navy);margin-bottom:14px;text-align:center;font-size:1rem;">THÔNG TIN CHUYỂN KHOẢN</p>
+              <div style="display:flex;flex-direction:column;gap:8px;font-size:.9rem;">
+                <div style="display:flex;gap:8px;align-items:center;">
+                  <span style="font-weight:700;color:var(--navy);min-width:130px;">Ngân hàng:</span>
+                  <span>TMCP Quân đội (MB Bank)</span>
+                </div>
+                <div style="display:flex;gap:8px;align-items:center;">
+                  <span style="font-weight:700;color:var(--navy);min-width:130px;">Số tài khoản:</span>
+                  <span style="font-size:1.05rem;font-weight:700;letter-spacing:1px;">620666688888</span>
+                </div>
+                <div style="display:flex;gap:8px;align-items:center;">
+                  <span style="font-weight:700;color:var(--navy);min-width:130px;">Tên tài khoản:</span>
+                  <span>CÔNG TY TNHH LETREND OLYMPIAD</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="transfer-note">
+            <strong><i class="fa-solid fa-thumbtack"></i> Nội dung chuyển khoản theo mẫu sau:</strong>
+            <p style="margin-top:8px;margin-bottom:6px;font-weight:600;">Chuyển lệ phí thi cá nhân:</p>
+            <p style="margin-bottom:4px;">KEO [Môn đăng ký] [Số điện thoại đăng ký] [Họ tên thí sinh] [Trường, lớp] [Tỉnh]</p>
+            <p style="font-style:italic;font-size:.8rem;margin-bottom:10px;">(Ví dụ: KEO Toan Khoa hoc Tieng Anh 0908888888 Tran Thi Mai THCS Ba Dinh lop 7 Ha Noi)</p>
+            <p style="margin-top:8px;margin-bottom:6px;font-weight:600;">Chuyển lệ phí thi đăng ký theo đơn vị (đơn vị thu phí và nộp cho Ban tổ chức):</p>
+            <p style="margin-bottom:4px;">KEO [Số điện thoại người phụ trách] [Tên đơn vị] [Số lượng thí sinh] [Tỉnh]</p>
+            <p style="font-style:italic;font-size:.8rem;margin-bottom:10px;">(Ví dụ: KEO 0908888888 TH Nguyen Sieu 20 Ha Noi)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PARTNERS ===== -->
+<section id="partners" class="section-sm">
+  <div class="math-deco" aria-hidden="true">
+    <span class="math-sym mf2" style="font-size:5.5rem;color:var(--green);top:5%;left:2%">π</span>
+    <span class="math-sym mf6" style="font-size:4.5rem;color:var(--navy);bottom:5%;right:2%">Σ</span>
+    <span class="math-sym mf4" style="font-size:4rem;color:var(--green-dark);top:20%;right:3%">∞</span>
+    <div class="math-ball mf3" style="width:100px;height:100px;top:-15px;right:20%;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.8),rgba(45,138,78,.25) 52%,rgba(45,138,78,.06));opacity:.16;"></div>
+    <div class="math-ball mf7" style="width:80px;height:80px;bottom:-10px;left:15%;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.7),rgba(13,27,75,.2) 52%,rgba(13,27,75,.05));opacity:.14;"></div>
+    <svg class="math-ruler-svg mf5" style="bottom:10%;right:6%;opacity:.06;color:var(--navy);transform:rotate(-6deg);" viewBox="0 0 180 36" width="180" height="36" fill="none">
+      <rect x="1" y="4" width="178" height="28" rx="3" stroke="currentColor" stroke-width="1.5" fill="rgba(13,27,75,.06)"></rect>
+      <line x1="20" y1="4" x2="20" y2="18" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="40" y1="4" x2="40" y2="12" stroke="currentColor" stroke-width="1"></line>
+      <line x1="60" y1="4" x2="60" y2="18" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="80" y1="4" x2="80" y2="12" stroke="currentColor" stroke-width="1"></line>
+      <line x1="100" y1="4" x2="100" y2="18" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="120" y1="4" x2="120" y2="12" stroke="currentColor" stroke-width="1"></line>
+      <line x1="140" y1="4" x2="140" y2="18" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="160" y1="4" x2="160" y2="12" stroke="currentColor" stroke-width="1"></line>
+    </svg>
+    <svg class="math-compass-svg mf1" style="top:8%;left:46%;opacity:.06;color:var(--green-dark);" viewBox="0 0 70 96" width="70" height="96" fill="none">
+      <circle cx="35" cy="16" r="4" stroke="currentColor" stroke-width="2"></circle>
+      <line x1="35" y1="16" x2="15" y2="88" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+      <line x1="35" y1="16" x2="55" y2="88" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+      <line x1="24" y1="56" x2="46" y2="56" stroke="currentColor" stroke-width="1.5"></line>
+      <path d="M 18 76 Q 35 88 52 76" stroke="currentColor" stroke-width="1.5" fill="none"></path>
+    </svg>
+  </div>
+  <div class="container">
+    <span class="badge badge-centered">Đối tác</span>
+    <h2 class="section-title">Đơn vị đồng hành tại Việt Nam</h2>
+    <div class="divider"></div>
+    <p class="section-sub">Các đơn vị đồng hành triển khai kỳ thi KEO KOALA tại Việt Nam.</p>
+    <div class="partners-grid reveal">
+      <div class="partner-card" style="flex-direction:column;gap:8px;height:auto;padding:24px 16px;align-items:center;">
+        <span style="font-size:2.2rem;"><i class="fa-solid fa-landmark"></i></span>
+        <span style="font-size:1rem;text-align:center;font-weight:600;line-height:1.5;">Đơn vị đồng hành<br><span style="font-size:.9rem;font-weight:400;color:var(--text-muted);">sắp được công bố</span></span>
+      </div>
+      <div class="partner-card" style="flex-direction:column;gap:8px;height:auto;padding:24px 16px;align-items:center;">
+        <span style="font-size:2.2rem;"><i class="fa-solid fa-handshake"></i></span>
+        <span style="font-size:1rem;text-align:center;font-weight:600;line-height:1.5;">Đơn vị đồng hành<br><span style="font-size:.9rem;font-weight:400;color:var(--text-muted);">sắp được công bố</span></span>
+      </div>
+      <div class="partner-card" style="flex-direction:column;gap:8px;height:auto;padding:24px 16px;align-items:center;">
+        <span style="font-size:2.2rem;"><i class="fa-solid fa-graduation-cap"></i></span>
+        <span style="font-size:1rem;text-align:center;font-weight:600;line-height:1.5;">Đơn vị đồng hành<br><span style="font-size:.9rem;font-weight:400;color:var(--text-muted);">sắp được công bố</span></span>
+      </div>
+      <div class="partner-card" style="flex-direction:column;gap:8px;height:auto;padding:24px 16px;align-items:center;">
+        <span style="font-size:2.2rem;"><i class="fa-solid fa-bullhorn"></i></span>
+        <span style="font-size:1rem;text-align:center;font-weight:600;line-height:1.5;">Đơn vị đồng hành<br><span style="font-size:.9rem;font-weight:400;color:var(--text-muted);">sắp được công bố</span></span>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:24px;">
+      <p style="font-size:.88rem;color:var(--text-muted);">Muốn trở thành đơn vị đồng hành? <a href="https://koala.letrendolympiad.edu.vn/#organizer" style="color:var(--green);font-weight:700;">Liên hệ với chúng tôi →</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section id="gallery" class="section-sm">
+  <div class="math-deco" aria-hidden="true">
+    <span class="math-sym mf4" style="font-size:5rem;color:var(--navy);top:5%;right:1%">∫</span>
+    <span class="math-sym mf6" style="font-size:4.5rem;color:var(--green);bottom:5%;left:2%">π</span>
+    <span class="math-sym mf2" style="font-size:4rem;color:var(--navy);top:15%;left:3%">√</span>
+    <div class="math-ball mf1" style="width:90px;height:90px;top:-10px;left:40%;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.7),rgba(45,138,78,.2) 52%,rgba(45,138,78,.05));opacity:.14;"></div>
+    <div class="math-ball mf5" style="width:110px;height:110px;bottom:-20px;right:8%;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.6),rgba(13,27,75,.18) 52%,rgba(13,27,75,.04));opacity:.13;"></div>
+    <svg class="math-ruler-svg mf3" style="top:8%;right:8%;opacity:.055;color:var(--navy);transform:rotate(-4deg);" viewBox="0 0 160 32" width="160" height="32" fill="none">
+      <rect x="1" y="3" width="158" height="26" rx="3" stroke="currentColor" stroke-width="1.5" fill="rgba(13,27,75,.05)"></rect>
+      <line x1="20" y1="3" x2="20" y2="15" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="40" y1="3" x2="40" y2="10" stroke="currentColor" stroke-width="1"></line>
+      <line x1="60" y1="3" x2="60" y2="15" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="80" y1="3" x2="80" y2="10" stroke="currentColor" stroke-width="1"></line>
+      <line x1="100" y1="3" x2="100" y2="15" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="120" y1="3" x2="120" y2="10" stroke="currentColor" stroke-width="1"></line>
+      <line x1="140" y1="3" x2="140" y2="15" stroke="currentColor" stroke-width="1.5"></line>
+    </svg>
+    <svg class="math-compass-svg mf7" style="bottom:3%;right:42%;opacity:.055;color:var(--green);" viewBox="0 0 70 96" width="70" height="96" fill="none">
+      <circle cx="35" cy="16" r="4" stroke="currentColor" stroke-width="2"></circle>
+      <line x1="35" y1="16" x2="15" y2="88" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+      <line x1="35" y1="16" x2="55" y2="88" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+      <line x1="24" y1="56" x2="46" y2="56" stroke="currentColor" stroke-width="1.5"></line>
+      <path d="M 18 76 Q 35 88 52 76" stroke="currentColor" stroke-width="1.5" fill="none"></path>
+    </svg>
+  </div>
+  <div class="container">
+    <span class="badge badge-centered">Hình ảnh</span>
+    <h2 class="section-title">Một số hình ảnh đáng nhớ</h2>
+    <div class="divider"></div>
+    <div class="gallery-grid reveal">
+      <div class="gallery-item"><img src="./KEO 2026 – Kỳ thi Olympic Toán học, Tiếng Anh và Khoa học KOALA Australia_files/592418872_815612368017508_6284500259036068874_n.jpg" alt="Hình ảnh kỳ thi KOALA" loading="lazy"></div>
+      <div class="gallery-item"><img src="./KEO 2026 – Kỳ thi Olympic Toán học, Tiếng Anh và Khoa học KOALA Australia_files/616826829_851797547732323_2443762334987739112_n.jpg" alt="Hình ảnh kỳ thi KOALA" loading="lazy"></div>
+      <div class="gallery-item"><img src="./KEO 2026 – Kỳ thi Olympic Toán học, Tiếng Anh và Khoa học KOALA Australia_files/633942229_869149772663767_3317894300167184477_n.jpg" alt="Hình ảnh kỳ thi KOALA" loading="lazy"></div>
+      <div class="gallery-item"><img src="./KEO 2026 – Kỳ thi Olympic Toán học, Tiếng Anh và Khoa học KOALA Australia_files/637801467_878328585079219_7740068146947899707_n.jpg" alt="Hình ảnh kỳ thi KOALA" loading="lazy"></div>
+      <div class="gallery-item"><img src="./KEO 2026 – Kỳ thi Olympic Toán học, Tiếng Anh và Khoa học KOALA Australia_files/649599068_891430077102403_5513871502896360500_n.jpg" alt="Hình ảnh kỳ thi KOALA" loading="lazy"></div>
+      <div class="gallery-item"><img src="./KEO 2026 – Kỳ thi Olympic Toán học, Tiếng Anh và Khoa học KOALA Australia_files/653027679_896128779965866_985151705252801093_n.jpg" alt="Hình ảnh kỳ thi KOALA" loading="lazy"></div>
+      <div class="gallery-item"><img src="./KEO 2026 – Kỳ thi Olympic Toán học, Tiếng Anh và Khoa học KOALA Australia_files/654380865_897525023159575_8716404658345047064_n.jpg" alt="Hình ảnh kỳ thi KOALA" loading="lazy"></div>
+      <div class="gallery-item"><img src="./KEO 2026 – Kỳ thi Olympic Toán học, Tiếng Anh và Khoa học KOALA Australia_files/655111381_897525029826241_6690836650825555917_n.jpg" alt="Hình ảnh kỳ thi KOALA" loading="lazy"></div>
+      <div class="gallery-item"><img src="./KEO 2026 – Kỳ thi Olympic Toán học, Tiếng Anh và Khoa học KOALA Australia_files/655906528_122162493596626306_298853667136690943_n.jpg" alt="Hình ảnh kỳ thi KOALA" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ORGANIZER ===== -->
+<section id="organizer" class="section">
+  <div class="math-deco" aria-hidden="true">
+    <span class="math-sym mf1" style="font-size:6rem;color:var(--green-dark);top:8%;left:2%">Σ</span>
+    <span class="math-sym mf3" style="font-size:5.5rem;color:var(--navy);top:15%;right:2%">π</span>
+    <span class="math-sym mf5" style="font-size:4.5rem;color:var(--green);bottom:10%;right:3%">∞</span>
+    <span class="math-sym mf7" style="font-size:4rem;color:var(--navy);bottom:18%;left:3%">√</span>
+    <div class="math-ball mf2" style="width:120px;height:120px;top:-20px;right:30%;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.8),rgba(45,138,78,.28) 52%,rgba(45,138,78,.07));opacity:.17;"></div>
+    <div class="math-ball mf6" style="width:90px;height:90px;bottom:5%;left:25%;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.7),rgba(240,165,0,.22) 52%,rgba(240,165,0,.05));opacity:.15;"></div>
+    <div class="math-ball mf4" style="width:145px;height:145px;top:35%;left:-30px;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.5),rgba(13,27,75,.15) 52%,rgba(13,27,75,.04));opacity:.13;"></div>
+    <svg class="math-ruler-svg mf8" style="bottom:16%;right:4%;opacity:.065;color:var(--green-dark);transform:rotate(7deg);" viewBox="0 0 220 44" width="220" height="44" fill="none">
+      <rect x="1" y="5" width="218" height="34" rx="4" stroke="currentColor" stroke-width="1.5" fill="rgba(13,27,75,.07)"></rect>
+      <line x1="20" y1="5" x2="20" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="40" y1="5" x2="40" y2="15" stroke="currentColor" stroke-width="1"></line>
+      <line x1="60" y1="5" x2="60" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="80" y1="5" x2="80" y2="15" stroke="currentColor" stroke-width="1"></line>
+      <line x1="100" y1="5" x2="100" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="120" y1="5" x2="120" y2="15" stroke="currentColor" stroke-width="1"></line>
+      <line x1="140" y1="5" x2="140" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="160" y1="5" x2="160" y2="15" stroke="currentColor" stroke-width="1"></line>
+      <line x1="180" y1="5" x2="180" y2="22" stroke="currentColor" stroke-width="1.5"></line>
+      <line x1="200" y1="5" x2="200" y2="15" stroke="currentColor" stroke-width="1"></line>
+    </svg>
+    <svg class="math-compass-svg mf3" style="top:5%;left:40%;opacity:.065;color:var(--navy);transform:rotate(-12deg);" viewBox="0 0 80 110" width="80" height="110" fill="none">
+      <circle cx="40" cy="18" r="5" stroke="currentColor" stroke-width="2"></circle>
+      <line x1="40" y1="18" x2="17" y2="100" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+      <line x1="40" y1="18" x2="63" y2="100" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+      <line x1="28" y1="64" x2="52" y2="64" stroke="currentColor" stroke-width="1.5"></line>
+      <path d="M 21 88 Q 40 102 59 88" stroke="currentColor" stroke-width="1.5" fill="none"></path>
+    </svg>
+  </div>
+  <div class="container">
+    <span class="badge badge-centered">Liên hệ</span>
+    <h2 class="section-title">Ban tổ chức tại Việt Nam</h2>
+    <div class="divider"></div>
+    <div class="organizer-card reveal">
+      <img src="./KEO 2026 – Kỳ thi Olympic Toán học, Tiếng Anh và Khoa học KOALA Australia_files/LETRENg-06.png" alt="Letrend" class="organizer-logo-img">
+      <div class="organizer-name">CÔNG TY TNHH LETREND OLYMPIAD</div>
+      <div class="organizer-address">
+        <i class="fa-solid fa-location-dot"></i> Trụ sở: B1 - BT5 KĐT Hạ Đình, Phường Thanh Liệt, Thành phố Hà Nội<br>
+        <small style="opacity:.7;">Đơn vị triển khai kỳ thi KEO KOALA tại Việt Nam</small>
+      </div>
+      <div class="contact-links">
+        <a href="tel:0975833382" class="contact-link"><i class="fa-solid fa-phone"></i> Hotline: <strong>&nbsp;0975833382</strong></a>
+        <a href="mailto:Letrendolympiad@gmail.com" class="contact-link"><i class="fa-solid fa-envelope"></i> Email: <strong>&nbsp;Letrendolympiad@gmail.com</strong></a>
+        <a href="https://www.facebook.com/LetrendOlympiad" target="_blank" rel="noopener noreferrer" class="contact-link"><i class="fa-brands fa-facebook" aria-hidden="true"></i> Fanpage chính thức</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <p class="footer-brand-title">BAN TỔ CHỨC KỲ THI KEO TẠI VIỆT NAM</p>
+        <p class="footer-brand-subtitle">CÔNG TY TNHH LETREND</p>
+        <ul class="footer-contact-list">
+          <li><strong>Trụ sở Công ty Letrend:</strong> B1 - BT5 KĐT Hạ Đình, Phường Thanh Liệt, Thành phố Hà Nội</li>
+          <li><strong>Hotline:</strong> <a href="tel:0975833382">0975833382</a></li>
+          <li><strong>Zalo:</strong> <a href="https://zalo.me/0975833382" target="_blank" rel="noopener noreferrer">0975833382</a></li>
+          <li><strong>Email:</strong> <a href="mailto:Letrendolympiad@gmail.com">Letrendolympiad@gmail.com</a></li>
+          <li><strong>Fanpage:</strong> <a href="https://www.facebook.com/LetrendOlympiad" target="_blank" rel="noopener noreferrer">https://www.facebook.com/LetrendOlympiad</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Liên kết nhanh</h4>
+        <ul>
+          <li><a href="https://koala.letrendolympiad.edu.vn/#about">Về kỳ thi KEO</a></li>
+          <li><a href="https://koala.letrendolympiad.edu.vn/#purpose">Mục đích kỳ thi</a></li>
+          <li><a href="https://koala.letrendolympiad.edu.vn/#timeline">Lịch thi</a></li>
+          <li><a href="https://koala.letrendolympiad.edu.vn/#awards">Giải thưởng</a></li>
+          <li><a href="https://koala.letrendolympiad.edu.vn/#curriculum">Thông tin đề thi</a></li>
+          <li><a href="https://koala.letrendolympiad.edu.vn/#registration">Đăng ký</a></li>
+        </ul>
+      </div>
+      <div class="footer-logos">
+        <div class="footer-logo-stack">
+          <img src="./KEO 2026 – Kỳ thi Olympic Toán học, Tiếng Anh và Khoa học KOALA Australia_files/KEo.png" alt="KEO" class="footer-logo-img footer-logo-stacked">
+          <img src="./KEO 2026 – Kỳ thi Olympic Toán học, Tiếng Anh và Khoa học KOALA Australia_files/LETRENg-06.png" alt="Letrend Olympiad" class="footer-logo-img footer-logo-stacked">
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 KEO KOALA Australia – All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== FLOATING CTA ===== -->
+<a href="https://koala.letrendolympiad.edu.vn/#registration" class="btn btn-primary floating-cta" id="floatingCta" style="display:none;">
+  <i class="fa-solid fa-trophy"></i> Đăng ký ngay
+</a>
+
+<!-- ===== FLOATING ZALO BUTTON ===== -->
+<a href="https://zalo.me/0975833382" class="zalo-float" target="_blank" rel="noopener noreferrer" aria-label="Liên hệ qua Zalo">
+  <img src="./KEO 2026 – Kỳ thi Olympic Toán học, Tiếng Anh và Khoa học KOALA Australia_files/Logo.svg" alt="Zalo">
+  <span class="zalo-float-label">Liên hệ Zalo</span>
+</a>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  // Hamburger menu
+  const btn = document.getElementById('hamburgerBtn');
+  const menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('open');
+    menu.classList.toggle('open');
+  });
+  function closeMobileMenu() {
+    btn.classList.remove('open');
+    menu.classList.remove('open');
+  }
+
+  // Award tabs
+  function switchTab(el, tab) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.awards-panel').forEach(p => p.classList.remove('active'));
+    document.getElementById('tab-' + tab).classList.add('active');
+    el.classList.add('active');
+  }
+
+  // Purpose tabs
+  function switchPurposeTab(el, tab) {
+    document.querySelectorAll('.purpose-tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.purpose-panel').forEach(p => p.classList.remove('active'));
+    document.getElementById('ptab-' + tab).classList.add('active');
+    el.classList.add('active');
+  }
+
+  // Subject info tabs (exam structure)
+  function switchSubjectInfo(el, tab) {
+    el.closest('.info-card').querySelectorAll('.subject-info-btn').forEach(b => b.classList.remove('active'));
+    el.closest('.info-card').querySelectorAll('.subject-info-panel').forEach(p => p.classList.remove('active'));
+    document.getElementById(tab).classList.add('active');
+    el.classList.add('active');
+  }
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach(el => observer.observe(el));
+
+  // Floating CTA visibility
+  const floatingCta = document.getElementById('floatingCta');
+  window.addEventListener('scroll', () => {
+    floatingCta.style.display = window.scrollY > 400 ? 'inline-flex' : 'none';
+  });
+
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!navbar.contains(e.target) && !menu.contains(e.target)) {
+      closeMobileMenu();
+    }
+  });
+</script>
+<script defer="" src="./KEO 2026 – Kỳ thi Olympic Toán học, Tiếng Anh và Khoa học KOALA Australia_files/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;170dea417d4b40f9a5dd694e07efe999&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+
+</body></html>
